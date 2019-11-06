@@ -194,7 +194,7 @@ class Model(nn.Module):
         logit = x_norm.mm(w_norm.permute(1,0))
         logit_aux = self.cls(x)
         
-        return (logit,logit_aux),(x)
+        return (logit,logit_aux),(last_conv)
 		
 class Loss(nn.Module):
     def __init__(self, args):

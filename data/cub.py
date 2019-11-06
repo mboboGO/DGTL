@@ -36,14 +36,20 @@ def att_make(data_list):
         if fine_name not in fine_labels:
             fine_labels.append(fine_name)
             fine2coarse[fine_name] = n-1
-    return coarse_labels,fine_labels,fine2coarse
+            
+    table = np.zeros([len(coarse_labels),len(fine_labels)])
+    for i,label in enumerate(fine_labels):
+        j = fine2coarse[label]
+        table[j,i] = 1
+    
+    return coarse_labels,fine_labels,fine2coarse,table
 
 def save_cub_data():
     print('### Load CUB data')
     print('current path:',os.getcwd())
     ''' path setting '''
-    split_path = '/userhome/raw_data/zsl_data/CUB'
-    image_path = '/userhome/raw_data/CUB_200_2011/CUB_200_2011/images/'
+    split_path = '/home/mbobo/raw_data/zsl_data/CUB'
+    image_path = '/home/mbobo/raw_data/CUB_200_2011/CUB_200_2011/images/'
     traindir = os.path.join(image_path,'../train.list')
     valdir = os.path.join(image_path,'../test.list')
 
@@ -51,9 +57,8 @@ def save_cub_data():
     att_data = io.loadmat(checkfile(os.path.join(split_path, 'att_splits.mat')))
     train_list_ = read_list(traindir)
     val_list_ = read_list(valdir)
-    coarse_labels,fine_labels,fine2coarse = att_make(train_list_)
-    nc = len(coarse_labels)
-    nf = len(fine_labels)
+    coarse_labels,fine_labels,fine2coarse,trans_map = att_make(train_list_)
+    [nc,nf] = trans_map.shape
     
     train_list = []
     for item_ in train_list_:
@@ -71,15 +76,8 @@ def save_cub_data():
         
     ''' att '''
     fine_att = att_data['att'].transpose()
-    coarse_att = np.zeros([nc,fine_att.shape[1]])
-    num = np.zeros([nc,1])
-    f2c = np.zeros([nf,1])
-    for f_i,label in enumerate(fine_labels):
-        c_i = fine2coarse[label]
-        coarse_att[c_i] += fine_att[f_i,:]
-        f2c[f_i,0]=c_i
-        num[c_i,0]=+1
-    coarse_att /= num
+    coarse_att = np.matmul(trans_map,fine_att)
+    coarse_att /= np.sum(trans_map,axis=1,keepdims=True)
     print('coarse_att:',coarse_att.shape)
     print('fine_att:',fine_att.shape)
         
@@ -94,12 +92,12 @@ def save_cub_data():
         # save att
         h5_semantic_file.create_dataset('fine_att', fine_att.shape, dtype=np.float32)
         h5_semantic_file.create_dataset('coarse_att', coarse_att.shape, dtype=np.float32)
-        h5_semantic_file.create_dataset('f2c', f2c.shape, dtype=np.int16)
+        h5_semantic_file.create_dataset('trans_map', trans_map.shape, dtype=np.int16)
         # image path
 
         h5_semantic_file['fine_att'][...] = fine_att
         h5_semantic_file['coarse_att'][...] = coarse_att
-        h5_semantic_file['f2c'][...] = f2c
+        h5_semantic_file['trans_map'][...] = trans_map
         h5_semantic_file['img_path'] = image_path
 
         h5_semantic_file.close()

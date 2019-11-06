@@ -1,0 +1,1011 @@
+Namespace(arch='base', backbone='resnet101', batch_size=128, data='cub', dist_backend='gloo', dist_url='tcp://224.66.41.62:23456', epoch_decay=30, epochs=90, gpu=None, is_fix=True, lr=0.001, momentum=0.9, pretrained=True, print_freq=10, resume='', save_path='./cub/checkpoints/base', seed=None, start_epoch=0, weight_decay=0.0001, workers=3, world_size=1)
+==> random seed: 7595
+=> using pre-trained model 'base'
+=> is the backbone fixed: 'True'
+Epoch: [0][0/47]	Inf Time 29.628	Update Time 2.619	Batch Time 34.869	
+L_total 4.8694 L_com 0.5651 L_cls 4.3043
+Epoch: [0][10/47]	Inf Time 4.780	Update Time 2.788	Batch Time 7.568	
+L_total 3.6137 L_com 0.0929 L_cls 3.5208
+Epoch: [0][20/47]	Inf Time 4.794	Update Time 2.792	Batch Time 7.586	
+L_total 3.3519 L_com 0.1013 L_cls 3.2506
+Epoch: [0][30/47]	Inf Time 4.779	Update Time 2.794	Batch Time 7.573	
+L_total 3.1058 L_com 0.1021 L_cls 3.0037
+Epoch: [0][40/47]	Inf Time 4.794	Update Time 2.799	Batch Time 7.594	
+L_total 2.9141 L_com 0.1015 L_cls 2.8127
+ * ACC1@ 2.727 ACC2@ 4.781
+saving!!!!
+Epoch: [1][0/47]	Inf Time 4.201	Update Time 2.791	Batch Time 10.197	
+L_total 2.5021 L_com 0.0977 L_cls 2.4044
+Epoch: [1][10/47]	Inf Time 4.801	Update Time 2.785	Batch Time 7.587	
+L_total 2.4432 L_com 0.0900 L_cls 2.3532
+Epoch: [1][20/47]	Inf Time 4.794	Update Time 2.799	Batch Time 7.594	
+L_total 2.4378 L_com 0.0789 L_cls 2.3589
+Epoch: [1][30/47]	Inf Time 4.785	Update Time 2.790	Batch Time 7.576	
+L_total 2.2698 L_com 0.0819 L_cls 2.1879
+Epoch: [1][40/47]	Inf Time 4.806	Update Time 2.792	Batch Time 7.598	
+L_total 2.0710 L_com 0.0807 L_cls 1.9903
+ * ACC1@ 3.728 ACC2@ 10.891
+saving!!!!
+Epoch: [2][0/47]	Inf Time 4.186	Update Time 2.798	Batch Time 9.909	
+L_total 2.0217 L_com 0.0717 L_cls 1.9500
+Epoch: [2][10/47]	Inf Time 4.797	Update Time 2.792	Batch Time 7.589	
+L_total 1.9917 L_com 0.0794 L_cls 1.9123
+Epoch: [2][20/47]	Inf Time 4.781	Update Time 2.792	Batch Time 7.575	
+L_total 1.6952 L_com 0.0669 L_cls 1.6282
+Epoch: [2][30/47]	Inf Time 4.788	Update Time 2.796	Batch Time 7.585	
+L_total 1.5966 L_com 0.0611 L_cls 1.5355
+Epoch: [2][40/47]	Inf Time 4.787	Update Time 2.793	Batch Time 7.580	
+L_total 1.5692 L_com 0.0517 L_cls 1.5176
+ * ACC1@ 6.213 ACC2@ 13.152
+saving!!!!
+Epoch: [3][0/47]	Inf Time 4.212	Update Time 2.788	Batch Time 9.991	
+L_total 1.3692 L_com 0.0510 L_cls 1.3183
+Epoch: [3][10/47]	Inf Time 4.791	Update Time 2.800	Batch Time 7.591	
+L_total 1.4784 L_com 0.0530 L_cls 1.4255
+Epoch: [3][20/47]	Inf Time 4.800	Update Time 2.784	Batch Time 7.584	
+L_total 1.5640 L_com 0.0502 L_cls 1.5137
+Epoch: [3][30/47]	Inf Time 4.780	Update Time 2.791	Batch Time 7.571	
+L_total 1.4087 L_com 0.0523 L_cls 1.3564
+Epoch: [3][40/47]	Inf Time 4.791	Update Time 2.794	Batch Time 7.586	
+L_total 1.4092 L_com 0.0498 L_cls 1.3594
+ * ACC1@ 8.543 ACC2@ 16.120
+saving!!!!
+Epoch: [4][0/47]	Inf Time 4.213	Update Time 2.792	Batch Time 9.620	
+L_total 1.2533 L_com 0.0478 L_cls 1.2055
+Epoch: [4][10/47]	Inf Time 4.797	Update Time 2.797	Batch Time 7.594	
+L_total 1.2311 L_com 0.0408 L_cls 1.1904
+Epoch: [4][20/47]	Inf Time 4.797	Update Time 2.788	Batch Time 7.585	
+L_total 1.3678 L_com 0.0422 L_cls 1.3256
+Epoch: [4][30/47]	Inf Time 4.798	Update Time 2.793	Batch Time 7.591	
+L_total 1.2212 L_com 0.0392 L_cls 1.1820
+Epoch: [4][40/47]	Inf Time 4.811	Update Time 2.793	Batch Time 7.604	
+L_total 1.0678 L_com 0.0373 L_cls 1.0305
+ * ACC1@ 10.425 ACC2@ 19.434
+saving!!!!
+Epoch: [5][0/47]	Inf Time 4.175	Update Time 2.786	Batch Time 9.656	
+L_total 1.2934 L_com 0.0400 L_cls 1.2534
+Epoch: [5][10/47]	Inf Time 4.788	Update Time 2.792	Batch Time 7.581	
+L_total 1.2925 L_com 0.0410 L_cls 1.2514
+Epoch: [5][20/47]	Inf Time 4.778	Update Time 2.791	Batch Time 7.569	
+L_total 1.1079 L_com 0.0358 L_cls 1.0721
+Epoch: [5][30/47]	Inf Time 4.781	Update Time 2.795	Batch Time 7.577	
+L_total 1.3612 L_com 0.0338 L_cls 1.3274
+Epoch: [5][40/47]	Inf Time 4.787	Update Time 2.793	Batch Time 7.580	
+L_total 1.0785 L_com 0.0334 L_cls 1.0451
+ * ACC1@ 11.788 ACC2@ 20.349
+saving!!!!
+Epoch: [6][0/47]	Inf Time 4.203	Update Time 2.794	Batch Time 10.112	
+L_total 1.2745 L_com 0.0329 L_cls 1.2415
+Epoch: [6][10/47]	Inf Time 4.793	Update Time 2.788	Batch Time 7.582	
+L_total 1.1559 L_com 0.0315 L_cls 1.1244
+Epoch: [6][20/47]	Inf Time 4.788	Update Time 2.797	Batch Time 7.585	
+L_total 1.1012 L_com 0.0310 L_cls 1.0702
+Epoch: [6][30/47]	Inf Time 4.800	Update Time 2.789	Batch Time 7.590	
+L_total 1.0610 L_com 0.0302 L_cls 1.0308
+Epoch: [6][40/47]	Inf Time 4.794	Update Time 2.793	Batch Time 7.588	
+L_total 0.8958 L_com 0.0307 L_cls 0.8651
+ * ACC1@ 10.476 ACC2@ 22.195
+saving!!!!
+Epoch: [7][0/47]	Inf Time 4.220	Update Time 2.801	Batch Time 10.191	
+L_total 1.1283 L_com 0.0309 L_cls 1.0974
+Epoch: [7][10/47]	Inf Time 4.782	Update Time 2.788	Batch Time 7.571	
+L_total 1.0599 L_com 0.0288 L_cls 1.0311
+Epoch: [7][20/47]	Inf Time 4.789	Update Time 2.791	Batch Time 7.581	
+L_total 1.1066 L_com 0.0286 L_cls 1.0780
+Epoch: [7][30/47]	Inf Time 4.787	Update Time 2.789	Batch Time 7.576	
+L_total 0.9005 L_com 0.0252 L_cls 0.8754
+Epoch: [7][40/47]	Inf Time 4.796	Update Time 2.797	Batch Time 7.594	
+L_total 0.9716 L_com 0.0288 L_cls 0.9428
+ * ACC1@ 12.910 ACC2@ 21.384
+Epoch: [8][0/47]	Inf Time 4.233	Update Time 2.794	Batch Time 9.862	
+L_total 0.9681 L_com 0.0262 L_cls 0.9419
+Epoch: [8][10/47]	Inf Time 4.795	Update Time 2.789	Batch Time 7.584	
+L_total 0.8433 L_com 0.0245 L_cls 0.8189
+Epoch: [8][20/47]	Inf Time 4.792	Update Time 2.802	Batch Time 7.595	
+L_total 0.8121 L_com 0.0228 L_cls 0.7893
+Epoch: [8][30/47]	Inf Time 4.775	Update Time 2.793	Batch Time 7.568	
+L_total 0.9889 L_com 0.0257 L_cls 0.9632
+Epoch: [8][40/47]	Inf Time 4.795	Update Time 2.788	Batch Time 7.584	
+L_total 0.9405 L_com 0.0242 L_cls 0.9163
+ * ACC1@ 11.995 ACC2@ 22.506
+saving!!!!
+Epoch: [9][0/47]	Inf Time 4.212	Update Time 2.791	Batch Time 9.485	
+L_total 0.9954 L_com 0.0257 L_cls 0.9697
+Epoch: [9][10/47]	Inf Time 4.787	Update Time 2.796	Batch Time 7.583	
+L_total 0.8337 L_com 0.0233 L_cls 0.8105
+Epoch: [9][20/47]	Inf Time 4.790	Update Time 2.791	Batch Time 7.582	
+L_total 0.7095 L_com 0.0213 L_cls 0.6882
+Epoch: [9][30/47]	Inf Time 4.796	Update Time 2.791	Batch Time 7.587	
+L_total 0.8424 L_com 0.0197 L_cls 0.8227
+Epoch: [9][40/47]	Inf Time 4.792	Update Time 2.794	Batch Time 7.586	
+L_total 0.9917 L_com 0.0211 L_cls 0.9707
+ * ACC1@ 15.188 ACC2@ 23.835
+saving!!!!
+Epoch: [10][0/47]	Inf Time 4.196	Update Time 2.792	Batch Time 9.952	
+L_total 0.7794 L_com 0.0196 L_cls 0.7598
+Epoch: [10][10/47]	Inf Time 4.785	Update Time 2.798	Batch Time 7.583	
+L_total 0.6658 L_com 0.0204 L_cls 0.6454
+Epoch: [10][20/47]	Inf Time 4.798	Update Time 2.795	Batch Time 7.593	
+L_total 0.7767 L_com 0.0200 L_cls 0.7567
+Epoch: [10][30/47]	Inf Time 4.785	Update Time 2.793	Batch Time 7.579	
+L_total 0.7303 L_com 0.0206 L_cls 0.7097
+Epoch: [10][40/47]	Inf Time 4.770	Update Time 2.785	Batch Time 7.556	
+L_total 1.0063 L_com 0.0196 L_cls 0.9867
+ * ACC1@ 14.981 ACC2@ 24.646
+saving!!!!
+Epoch: [11][0/47]	Inf Time 4.228	Update Time 2.783	Batch Time 10.030	
+L_total 0.8176 L_com 0.0196 L_cls 0.7980
+Epoch: [11][10/47]	Inf Time 4.800	Update Time 2.782	Batch Time 7.582	
+L_total 0.6187 L_com 0.0214 L_cls 0.5973
+Epoch: [11][20/47]	Inf Time 4.779	Update Time 2.790	Batch Time 7.569	
+L_total 0.7919 L_com 0.0187 L_cls 0.7731
+Epoch: [11][30/47]	Inf Time 4.778	Update Time 2.787	Batch Time 7.566	
+L_total 0.6881 L_com 0.0180 L_cls 0.6701
+Epoch: [11][40/47]	Inf Time 4.772	Update Time 2.793	Batch Time 7.566	
+L_total 0.8494 L_com 0.0195 L_cls 0.8299
+ * ACC1@ 16.776 ACC2@ 24.957
+saving!!!!
+Epoch: [12][0/47]	Inf Time 4.198	Update Time 2.790	Batch Time 10.127	
+L_total 0.7652 L_com 0.0182 L_cls 0.7470
+Epoch: [12][10/47]	Inf Time 4.795	Update Time 2.792	Batch Time 7.588	
+L_total 0.7327 L_com 0.0179 L_cls 0.7148
+Epoch: [12][20/47]	Inf Time 4.789	Update Time 2.786	Batch Time 7.576	
+L_total 0.6115 L_com 0.0168 L_cls 0.5946
+Epoch: [12][30/47]	Inf Time 4.798	Update Time 2.795	Batch Time 7.594	
+L_total 0.7484 L_com 0.0181 L_cls 0.7303
+Epoch: [12][40/47]	Inf Time 4.783	Update Time 2.788	Batch Time 7.572	
+L_total 0.7817 L_com 0.0180 L_cls 0.7637
+ * ACC1@ 15.378 ACC2@ 25.785
+saving!!!!
+Epoch: [13][0/47]	Inf Time 4.225	Update Time 2.786	Batch Time 10.197	
+L_total 0.8168 L_com 0.0173 L_cls 0.7995
+Epoch: [13][10/47]	Inf Time 4.786	Update Time 2.791	Batch Time 7.577	
+L_total 0.7386 L_com 0.0170 L_cls 0.7216
+Epoch: [13][20/47]	Inf Time 4.792	Update Time 2.793	Batch Time 7.585	
+L_total 0.7729 L_com 0.0161 L_cls 0.7568
+Epoch: [13][30/47]	Inf Time 4.799	Update Time 2.790	Batch Time 7.589	
+L_total 0.8946 L_com 0.0178 L_cls 0.8769
+Epoch: [13][40/47]	Inf Time 4.787	Update Time 2.795	Batch Time 7.583	
+L_total 0.7340 L_com 0.0163 L_cls 0.7177
+ * ACC1@ 15.516 ACC2@ 24.560
+Epoch: [14][0/47]	Inf Time 4.199	Update Time 2.789	Batch Time 9.978	
+L_total 0.8397 L_com 0.0162 L_cls 0.8236
+Epoch: [14][10/47]	Inf Time 4.796	Update Time 2.793	Batch Time 7.590	
+L_total 0.5957 L_com 0.0180 L_cls 0.5777
+Epoch: [14][20/47]	Inf Time 4.789	Update Time 2.793	Batch Time 7.582	
+L_total 0.7627 L_com 0.0166 L_cls 0.7461
+Epoch: [14][30/47]	Inf Time 4.779	Update Time 2.790	Batch Time 7.569	
+L_total 0.6845 L_com 0.0162 L_cls 0.6684
+Epoch: [14][40/47]	Inf Time 4.775	Update Time 2.791	Batch Time 7.567	
+L_total 0.4876 L_com 0.0146 L_cls 0.4731
+ * ACC1@ 15.447 ACC2@ 26.545
+saving!!!!
+Epoch: [15][0/47]	Inf Time 4.238	Update Time 2.787	Batch Time 9.695	
+L_total 0.6771 L_com 0.0166 L_cls 0.6605
+Epoch: [15][10/47]	Inf Time 4.771	Update Time 2.783	Batch Time 7.554	
+L_total 0.6462 L_com 0.0155 L_cls 0.6307
+Epoch: [15][20/47]	Inf Time 4.794	Update Time 2.793	Batch Time 7.588	
+L_total 0.7999 L_com 0.0150 L_cls 0.7849
+Epoch: [15][30/47]	Inf Time 4.775	Update Time 2.792	Batch Time 7.568	
+L_total 0.7270 L_com 0.0149 L_cls 0.7121
+Epoch: [15][40/47]	Inf Time 4.771	Update Time 2.786	Batch Time 7.557	
+L_total 0.7851 L_com 0.0146 L_cls 0.7705
+ * ACC1@ 16.293 ACC2@ 28.184
+saving!!!!
+Epoch: [16][0/47]	Inf Time 4.210	Update Time 2.782	Batch Time 9.518	
+L_total 0.5141 L_com 0.0137 L_cls 0.5004
+Epoch: [16][10/47]	Inf Time 4.786	Update Time 2.789	Batch Time 7.578	
+L_total 0.7737 L_com 0.0166 L_cls 0.7571
+Epoch: [16][20/47]	Inf Time 4.785	Update Time 2.788	Batch Time 7.574	
+L_total 0.6560 L_com 0.0150 L_cls 0.6410
+Epoch: [16][30/47]	Inf Time 4.795	Update Time 2.783	Batch Time 7.578	
+L_total 0.6764 L_com 0.0141 L_cls 0.6623
+Epoch: [16][40/47]	Inf Time 4.786	Update Time 2.784	Batch Time 7.571	
+L_total 0.5564 L_com 0.0150 L_cls 0.5413
+ * ACC1@ 14.480 ACC2@ 25.095
+Epoch: [17][0/47]	Inf Time 4.114	Update Time 2.782	Batch Time 9.399	
+L_total 0.6899 L_com 0.0150 L_cls 0.6748
+Epoch: [17][10/47]	Inf Time 4.767	Update Time 2.783	Batch Time 7.551	
+L_total 0.6396 L_com 0.0143 L_cls 0.6253
+Epoch: [17][20/47]	Inf Time 4.779	Update Time 2.783	Batch Time 7.562	
+L_total 0.6082 L_com 0.0136 L_cls 0.5946
+Epoch: [17][30/47]	Inf Time 4.775	Update Time 2.788	Batch Time 7.564	
+L_total 0.7276 L_com 0.0142 L_cls 0.7134
+Epoch: [17][40/47]	Inf Time 4.794	Update Time 2.797	Batch Time 7.591	
+L_total 0.9338 L_com 0.0142 L_cls 0.9196
+ * ACC1@ 16.379 ACC2@ 26.424
+Epoch: [18][0/47]	Inf Time 4.187	Update Time 2.788	Batch Time 9.607	
+L_total 0.7705 L_com 0.0142 L_cls 0.7563
+Epoch: [18][10/47]	Inf Time 4.779	Update Time 2.786	Batch Time 7.565	
+L_total 0.7315 L_com 0.0138 L_cls 0.7177
+Epoch: [18][20/47]	Inf Time 4.787	Update Time 2.785	Batch Time 7.572	
+L_total 0.5988 L_com 0.0132 L_cls 0.5856
+Epoch: [18][30/47]	Inf Time 4.792	Update Time 2.798	Batch Time 7.591	
+L_total 0.7666 L_com 0.0129 L_cls 0.7537
+Epoch: [18][40/47]	Inf Time 4.795	Update Time 2.788	Batch Time 7.584	
+L_total 0.7785 L_com 0.0130 L_cls 0.7654
+ * ACC1@ 17.276 ACC2@ 27.511
+Epoch: [19][0/47]	Inf Time 4.208	Update Time 2.793	Batch Time 9.647	
+L_total 0.5840 L_com 0.0127 L_cls 0.5713
+Epoch: [19][10/47]	Inf Time 4.778	Update Time 2.786	Batch Time 7.564	
+L_total 0.6185 L_com 0.0127 L_cls 0.6058
+Epoch: [19][20/47]	Inf Time 4.797	Update Time 2.804	Batch Time 7.602	
+L_total 0.6238 L_com 0.0138 L_cls 0.6100
+Epoch: [19][30/47]	Inf Time 4.794	Update Time 2.796	Batch Time 7.591	
+L_total 0.5366 L_com 0.0138 L_cls 0.5228
+Epoch: [19][40/47]	Inf Time 4.788	Update Time 2.788	Batch Time 7.577	
+L_total 0.5790 L_com 0.0115 L_cls 0.5674
+ * ACC1@ 16.310 ACC2@ 26.079
+Epoch: [20][0/47]	Inf Time 4.131	Update Time 2.792	Batch Time 9.315	
+L_total 0.4502 L_com 0.0130 L_cls 0.4372
+Epoch: [20][10/47]	Inf Time 4.787	Update Time 2.788	Batch Time 7.575	
+L_total 0.6132 L_com 0.0128 L_cls 0.6004
+Epoch: [20][20/47]	Inf Time 4.791	Update Time 2.802	Batch Time 7.593	
+L_total 0.7873 L_com 0.0130 L_cls 0.7744
+Epoch: [20][30/47]	Inf Time 4.778	Update Time 2.787	Batch Time 7.565	
+L_total 0.5497 L_com 0.0117 L_cls 0.5380
+Epoch: [20][40/47]	Inf Time 4.776	Update Time 2.793	Batch Time 7.569	
+L_total 0.5361 L_com 0.0119 L_cls 0.5242
+ * ACC1@ 14.550 ACC2@ 25.526
+Epoch: [21][0/47]	Inf Time 4.128	Update Time 2.783	Batch Time 9.378	
+L_total 0.5872 L_com 0.0127 L_cls 0.5745
+Epoch: [21][10/47]	Inf Time 4.785	Update Time 2.788	Batch Time 7.573	
+L_total 0.6624 L_com 0.0119 L_cls 0.6505
+Epoch: [21][20/47]	Inf Time 4.792	Update Time 2.792	Batch Time 7.584	
+L_total 0.5923 L_com 0.0114 L_cls 0.5809
+Epoch: [21][30/47]	Inf Time 4.785	Update Time 2.796	Batch Time 7.582	
+L_total 0.7685 L_com 0.0122 L_cls 0.7563
+Epoch: [21][40/47]	Inf Time 4.786	Update Time 2.793	Batch Time 7.580	
+L_total 0.5838 L_com 0.0113 L_cls 0.5725
+ * ACC1@ 16.759 ACC2@ 26.320
+Epoch: [22][0/47]	Inf Time 4.210	Update Time 2.774	Batch Time 9.504	
+L_total 0.5514 L_com 0.0122 L_cls 0.5392
+Epoch: [22][10/47]	Inf Time 4.797	Update Time 2.789	Batch Time 7.587	
+L_total 0.5466 L_com 0.0116 L_cls 0.5350
+Epoch: [22][20/47]	Inf Time 4.788	Update Time 2.792	Batch Time 7.580	
+L_total 0.4691 L_com 0.0108 L_cls 0.4583
+Epoch: [22][30/47]	Inf Time 4.794	Update Time 2.801	Batch Time 7.595	
+L_total 0.5899 L_com 0.0113 L_cls 0.5786
+Epoch: [22][40/47]	Inf Time 4.795	Update Time 2.800	Batch Time 7.595	
+L_total 0.4850 L_com 0.0104 L_cls 0.4746
+ * ACC1@ 16.621 ACC2@ 26.873
+Epoch: [23][0/47]	Inf Time 4.225	Update Time 2.797	Batch Time 10.211	
+L_total 0.5874 L_com 0.0104 L_cls 0.5770
+Epoch: [23][10/47]	Inf Time 4.788	Update Time 2.803	Batch Time 7.591	
+L_total 0.7440 L_com 0.0139 L_cls 0.7300
+Epoch: [23][20/47]	Inf Time 4.795	Update Time 2.801	Batch Time 7.596	
+L_total 0.6460 L_com 0.0115 L_cls 0.6345
+Epoch: [23][30/47]	Inf Time 4.792	Update Time 2.806	Batch Time 7.598	
+L_total 0.4872 L_com 0.0102 L_cls 0.4769
+Epoch: [23][40/47]	Inf Time 4.787	Update Time 2.796	Batch Time 7.584	
+L_total 0.5569 L_com 0.0115 L_cls 0.5454
+ * ACC1@ 16.655 ACC2@ 26.873
+Epoch: [24][0/47]	Inf Time 4.249	Update Time 2.804	Batch Time 10.161	
+L_total 0.5847 L_com 0.0111 L_cls 0.5736
+Epoch: [24][10/47]	Inf Time 4.790	Update Time 2.797	Batch Time 7.587	
+L_total 0.4293 L_com 0.0104 L_cls 0.4188
+Epoch: [24][20/47]	Inf Time 4.794	Update Time 2.812	Batch Time 7.606	
+L_total 0.6810 L_com 0.0102 L_cls 0.6708
+Epoch: [24][30/47]	Inf Time 4.787	Update Time 2.781	Batch Time 7.569	
+L_total 0.5767 L_com 0.0106 L_cls 0.5661
+Epoch: [24][40/47]	Inf Time 4.764	Update Time 2.785	Batch Time 7.549	
+L_total 0.7152 L_com 0.0105 L_cls 0.7048
+ * ACC1@ 16.931 ACC2@ 28.340
+saving!!!!
+Epoch: [25][0/47]	Inf Time 4.193	Update Time 2.780	Batch Time 9.794	
+L_total 0.6254 L_com 0.0106 L_cls 0.6148
+Epoch: [25][10/47]	Inf Time 4.774	Update Time 2.783	Batch Time 7.558	
+L_total 0.3882 L_com 0.0094 L_cls 0.3788
+Epoch: [25][20/47]	Inf Time 4.777	Update Time 2.772	Batch Time 7.549	
+L_total 0.6590 L_com 0.0112 L_cls 0.6479
+Epoch: [25][30/47]	Inf Time 4.753	Update Time 2.782	Batch Time 7.536	
+L_total 0.5746 L_com 0.0094 L_cls 0.5652
+Epoch: [25][40/47]	Inf Time 4.772	Update Time 2.773	Batch Time 7.546	
+L_total 0.5362 L_com 0.0114 L_cls 0.5248
+ * ACC1@ 15.896 ACC2@ 27.563
+Epoch: [26][0/47]	Inf Time 4.189	Update Time 2.777	Batch Time 9.714	
+L_total 0.4327 L_com 0.0100 L_cls 0.4227
+Epoch: [26][10/47]	Inf Time 4.770	Update Time 2.782	Batch Time 7.553	
+L_total 0.5162 L_com 0.0109 L_cls 0.5053
+Epoch: [26][20/47]	Inf Time 4.768	Update Time 2.775	Batch Time 7.544	
+L_total 0.4088 L_com 0.0105 L_cls 0.3984
+Epoch: [26][30/47]	Inf Time 4.762	Update Time 2.784	Batch Time 7.546	
+L_total 0.7963 L_com 0.0103 L_cls 0.7860
+Epoch: [26][40/47]	Inf Time 4.789	Update Time 2.797	Batch Time 7.586	
+L_total 0.6232 L_com 0.0110 L_cls 0.6122
+ * ACC1@ 16.880 ACC2@ 26.924
+Epoch: [27][0/47]	Inf Time 4.220	Update Time 2.799	Batch Time 9.586	
+L_total 0.4355 L_com 0.0101 L_cls 0.4254
+Epoch: [27][10/47]	Inf Time 4.788	Update Time 2.790	Batch Time 7.581	
+L_total 0.4708 L_com 0.0100 L_cls 0.4608
+Epoch: [27][20/47]	Inf Time 4.790	Update Time 2.807	Batch Time 7.597	
+L_total 0.5449 L_com 0.0103 L_cls 0.5345
+Epoch: [27][30/47]	Inf Time 4.798	Update Time 2.803	Batch Time 7.601	
+L_total 0.4959 L_com 0.0106 L_cls 0.4853
+Epoch: [27][40/47]	Inf Time 4.788	Update Time 2.801	Batch Time 7.590	
+L_total 0.6098 L_com 0.0101 L_cls 0.5997
+ * ACC1@ 16.068 ACC2@ 26.804
+Epoch: [28][0/47]	Inf Time 4.213	Update Time 2.808	Batch Time 9.579	
+L_total 0.7677 L_com 0.0102 L_cls 0.7575
+Epoch: [28][10/47]	Inf Time 4.793	Update Time 2.798	Batch Time 7.591	
+L_total 0.5024 L_com 0.0100 L_cls 0.4925
+Epoch: [28][20/47]	Inf Time 4.798	Update Time 2.804	Batch Time 7.603	
+L_total 0.5369 L_com 0.0102 L_cls 0.5266
+Epoch: [28][30/47]	Inf Time 4.789	Update Time 2.802	Batch Time 7.592	
+L_total 0.5444 L_com 0.0097 L_cls 0.5347
+Epoch: [28][40/47]	Inf Time 4.795	Update Time 2.804	Batch Time 7.600	
+L_total 0.6528 L_com 0.0104 L_cls 0.6423
+ * ACC1@ 17.346 ACC2@ 25.906
+Epoch: [29][0/47]	Inf Time 4.249	Update Time 2.806	Batch Time 9.945	
+L_total 0.4497 L_com 0.0100 L_cls 0.4398
+Epoch: [29][10/47]	Inf Time 4.792	Update Time 2.796	Batch Time 7.588	
+L_total 0.5437 L_com 0.0098 L_cls 0.5339
+Epoch: [29][20/47]	Inf Time 4.790	Update Time 2.806	Batch Time 7.597	
+L_total 0.5699 L_com 0.0100 L_cls 0.5598
+Epoch: [29][30/47]	Inf Time 4.794	Update Time 2.797	Batch Time 7.592	
+L_total 0.6496 L_com 0.0105 L_cls 0.6391
+Epoch: [29][40/47]	Inf Time 4.790	Update Time 2.802	Batch Time 7.593	
+L_total 0.5561 L_com 0.0100 L_cls 0.5462
+ * ACC1@ 17.156 ACC2@ 26.148
+Epoch: [30][0/47]	Inf Time 4.213	Update Time 2.794	Batch Time 10.062	
+L_total 0.7155 L_com 0.0103 L_cls 0.7052
+Epoch: [30][10/47]	Inf Time 4.783	Update Time 2.799	Batch Time 7.582	
+L_total 0.4422 L_com 0.0081 L_cls 0.4340
+Epoch: [30][20/47]	Inf Time 4.797	Update Time 2.799	Batch Time 7.596	
+L_total 0.4580 L_com 0.0083 L_cls 0.4497
+Epoch: [30][30/47]	Inf Time 4.791	Update Time 2.801	Batch Time 7.593	
+L_total 0.3097 L_com 0.0082 L_cls 0.3015
+Epoch: [30][40/47]	Inf Time 4.811	Update Time 2.808	Batch Time 7.620	
+L_total 0.4968 L_com 0.0095 L_cls 0.4873
+ * ACC1@ 17.708 ACC2@ 29.669
+saving!!!!
+Epoch: [31][0/47]	Inf Time 4.164	Update Time 2.795	Batch Time 9.406	
+L_total 0.4148 L_com 0.0087 L_cls 0.4060
+Epoch: [31][10/47]	Inf Time 4.802	Update Time 2.812	Batch Time 7.614	
+L_total 0.5027 L_com 0.0089 L_cls 0.4938
+Epoch: [31][20/47]	Inf Time 4.808	Update Time 2.799	Batch Time 7.608	
+L_total 0.4380 L_com 0.0086 L_cls 0.4295
+Epoch: [31][30/47]	Inf Time 4.783	Update Time 2.795	Batch Time 7.579	
+L_total 0.2836 L_com 0.0087 L_cls 0.2748
+Epoch: [31][40/47]	Inf Time 4.806	Update Time 2.803	Batch Time 7.610	
+L_total 0.4208 L_com 0.0087 L_cls 0.4121
+ * ACC1@ 17.673 ACC2@ 29.341
+Epoch: [32][0/47]	Inf Time 4.220	Update Time 2.799	Batch Time 9.938	
+L_total 0.3096 L_com 0.0087 L_cls 0.3009
+Epoch: [32][10/47]	Inf Time 4.798	Update Time 2.811	Batch Time 7.610	
+L_total 0.4104 L_com 0.0088 L_cls 0.4016
+Epoch: [32][20/47]	Inf Time 4.810	Update Time 2.800	Batch Time 7.611	
+L_total 0.3167 L_com 0.0086 L_cls 0.3082
+Epoch: [32][30/47]	Inf Time 4.792	Update Time 2.805	Batch Time 7.597	
+L_total 0.3916 L_com 0.0086 L_cls 0.3829
+Epoch: [32][40/47]	Inf Time 4.796	Update Time 2.802	Batch Time 7.599	
+L_total 0.3324 L_com 0.0094 L_cls 0.3230
+ * ACC1@ 17.346 ACC2@ 29.375
+Epoch: [33][0/47]	Inf Time 4.218	Update Time 2.814	Batch Time 9.559	
+L_total 0.4046 L_com 0.0088 L_cls 0.3958
+Epoch: [33][10/47]	Inf Time 4.790	Update Time 2.798	Batch Time 7.589	
+L_total 0.3644 L_com 0.0094 L_cls 0.3550
+Epoch: [33][20/47]	Inf Time 4.791	Update Time 2.800	Batch Time 7.592	
+L_total 0.3716 L_com 0.0094 L_cls 0.3622
+Epoch: [33][30/47]	Inf Time 4.808	Update Time 2.807	Batch Time 7.615	
+L_total 0.3140 L_com 0.0087 L_cls 0.3053
+Epoch: [33][40/47]	Inf Time 4.805	Update Time 2.804	Batch Time 7.609	
+L_total 0.4412 L_com 0.0094 L_cls 0.4318
+ * ACC1@ 17.898 ACC2@ 29.462
+Epoch: [34][0/47]	Inf Time 4.162	Update Time 2.794	Batch Time 9.452	
+L_total 0.3386 L_com 0.0093 L_cls 0.3294
+Epoch: [34][10/47]	Inf Time 4.809	Update Time 2.796	Batch Time 7.606	
+L_total 0.3528 L_com 0.0092 L_cls 0.3437
+Epoch: [34][20/47]	Inf Time 4.776	Update Time 2.795	Batch Time 7.572	
+L_total 0.3384 L_com 0.0089 L_cls 0.3295
+Epoch: [34][30/47]	Inf Time 4.799	Update Time 2.791	Batch Time 7.590	
+L_total 0.3929 L_com 0.0089 L_cls 0.3841
+Epoch: [34][40/47]	Inf Time 4.792	Update Time 2.803	Batch Time 7.595	
+L_total 0.3084 L_com 0.0088 L_cls 0.2997
+ * ACC1@ 18.070 ACC2@ 29.496
+Epoch: [35][0/47]	Inf Time 4.228	Update Time 2.797	Batch Time 9.990	
+L_total 0.4957 L_com 0.0090 L_cls 0.4867
+Epoch: [35][10/47]	Inf Time 4.802	Update Time 2.793	Batch Time 7.596	
+L_total 0.3974 L_com 0.0089 L_cls 0.3884
+Epoch: [35][20/47]	Inf Time 4.789	Update Time 2.805	Batch Time 7.594	
+L_total 0.4871 L_com 0.0087 L_cls 0.4784
+Epoch: [35][30/47]	Inf Time 4.793	Update Time 2.807	Batch Time 7.601	
+L_total 0.4046 L_com 0.0094 L_cls 0.3952
+Epoch: [35][40/47]	Inf Time 4.802	Update Time 2.795	Batch Time 7.598	
+L_total 0.2761 L_com 0.0090 L_cls 0.2671
+ * ACC1@ 18.243 ACC2@ 29.600
+Epoch: [36][0/47]	Inf Time 4.239	Update Time 2.806	Batch Time 10.101	
+L_total 0.5002 L_com 0.0088 L_cls 0.4914
+Epoch: [36][10/47]	Inf Time 4.811	Update Time 2.799	Batch Time 7.610	
+L_total 0.4282 L_com 0.0091 L_cls 0.4191
+Epoch: [36][20/47]	Inf Time 4.805	Update Time 2.796	Batch Time 7.601	
+L_total 0.3658 L_com 0.0087 L_cls 0.3571
+Epoch: [36][30/47]	Inf Time 4.791	Update Time 2.810	Batch Time 7.602	
+L_total 0.4525 L_com 0.0090 L_cls 0.4434
+Epoch: [36][40/47]	Inf Time 4.797	Update Time 2.796	Batch Time 7.594	
+L_total 0.5205 L_com 0.0093 L_cls 0.5112
+ * ACC1@ 18.588 ACC2@ 29.496
+Epoch: [37][0/47]	Inf Time 4.227	Update Time 2.800	Batch Time 9.480	
+L_total 0.4429 L_com 0.0092 L_cls 0.4337
+Epoch: [37][10/47]	Inf Time 4.803	Update Time 2.806	Batch Time 7.609	
+L_total 0.4556 L_com 0.0094 L_cls 0.4462
+Epoch: [37][20/47]	Inf Time 4.796	Update Time 2.809	Batch Time 7.605	
+L_total 0.4180 L_com 0.0084 L_cls 0.4096
+Epoch: [37][30/47]	Inf Time 4.804	Update Time 2.804	Batch Time 7.609	
+L_total 0.4383 L_com 0.0098 L_cls 0.4286
+Epoch: [37][40/47]	Inf Time 4.804	Update Time 2.805	Batch Time 7.610	
+L_total 0.4108 L_com 0.0087 L_cls 0.4021
+ * ACC1@ 18.278 ACC2@ 29.099
+Epoch: [38][0/47]	Inf Time 4.233	Update Time 2.803	Batch Time 9.944	
+L_total 0.3958 L_com 0.0093 L_cls 0.3865
+Epoch: [38][10/47]	Inf Time 4.802	Update Time 2.806	Batch Time 7.608	
+L_total 0.3390 L_com 0.0083 L_cls 0.3306
+Epoch: [38][20/47]	Inf Time 4.785	Update Time 2.792	Batch Time 7.577	
+L_total 0.3482 L_com 0.0090 L_cls 0.3393
+Epoch: [38][30/47]	Inf Time 4.797	Update Time 2.803	Batch Time 7.600	
+L_total 0.5322 L_com 0.0091 L_cls 0.5231
+Epoch: [38][40/47]	Inf Time 4.817	Update Time 2.804	Batch Time 7.621	
+L_total 0.3654 L_com 0.0083 L_cls 0.3571
+ * ACC1@ 18.502 ACC2@ 29.703
+saving!!!!
+Epoch: [39][0/47]	Inf Time 4.220	Update Time 2.801	Batch Time 10.200	
+L_total 0.4972 L_com 0.0091 L_cls 0.4881
+Epoch: [39][10/47]	Inf Time 4.792	Update Time 2.797	Batch Time 7.590	
+L_total 0.3487 L_com 0.0088 L_cls 0.3399
+Epoch: [39][20/47]	Inf Time 4.821	Update Time 2.794	Batch Time 7.615	
+L_total 0.3702 L_com 0.0084 L_cls 0.3619
+Epoch: [39][30/47]	Inf Time 4.811	Update Time 2.804	Batch Time 7.616	
+L_total 0.2838 L_com 0.0081 L_cls 0.2757
+Epoch: [39][40/47]	Inf Time 4.796	Update Time 2.796	Batch Time 7.593	
+L_total 0.3478 L_com 0.0085 L_cls 0.3393
+ * ACC1@ 18.070 ACC2@ 29.099
+Epoch: [40][0/47]	Inf Time 4.155	Update Time 2.801	Batch Time 9.237	
+L_total 0.4553 L_com 0.0088 L_cls 0.4465
+Epoch: [40][10/47]	Inf Time 4.791	Update Time 2.799	Batch Time 7.591	
+L_total 0.3164 L_com 0.0090 L_cls 0.3074
+Epoch: [40][20/47]	Inf Time 4.795	Update Time 2.804	Batch Time 7.600	
+L_total 0.3096 L_com 0.0089 L_cls 0.3007
+Epoch: [40][30/47]	Inf Time 4.806	Update Time 2.802	Batch Time 7.609	
+L_total 0.5387 L_com 0.0101 L_cls 0.5286
+Epoch: [40][40/47]	Inf Time 4.798	Update Time 2.792	Batch Time 7.591	
+L_total 0.2363 L_com 0.0085 L_cls 0.2278
+ * ACC1@ 18.485 ACC2@ 29.272
+Epoch: [41][0/47]	Inf Time 4.253	Update Time 2.809	Batch Time 10.171	
+L_total 0.5720 L_com 0.0089 L_cls 0.5631
+Epoch: [41][10/47]	Inf Time 4.791	Update Time 2.800	Batch Time 7.592	
+L_total 0.3986 L_com 0.0086 L_cls 0.3900
+Epoch: [41][20/47]	Inf Time 4.797	Update Time 2.809	Batch Time 7.606	
+L_total 0.4376 L_com 0.0084 L_cls 0.4292
+Epoch: [41][30/47]	Inf Time 4.810	Update Time 2.807	Batch Time 7.617	
+L_total 0.4453 L_com 0.0079 L_cls 0.4373
+Epoch: [41][40/47]	Inf Time 4.785	Update Time 2.803	Batch Time 7.589	
+L_total 0.3331 L_com 0.0083 L_cls 0.3248
+ * ACC1@ 18.709 ACC2@ 29.582
+Epoch: [42][0/47]	Inf Time 4.217	Update Time 2.796	Batch Time 9.877	
+L_total 0.3146 L_com 0.0080 L_cls 0.3066
+Epoch: [42][10/47]	Inf Time 4.787	Update Time 2.795	Batch Time 7.582	
+L_total 0.2990 L_com 0.0082 L_cls 0.2908
+Epoch: [42][20/47]	Inf Time 4.815	Update Time 2.807	Batch Time 7.623	
+L_total 0.5938 L_com 0.0088 L_cls 0.5850
+Epoch: [42][30/47]	Inf Time 4.792	Update Time 2.804	Batch Time 7.596	
+L_total 0.3319 L_com 0.0082 L_cls 0.3237
+Epoch: [42][40/47]	Inf Time 4.816	Update Time 2.802	Batch Time 7.619	
+L_total 0.4840 L_com 0.0084 L_cls 0.4756
+ * ACC1@ 18.122 ACC2@ 29.185
+Epoch: [43][0/47]	Inf Time 4.211	Update Time 2.793	Batch Time 9.614	
+L_total 0.2511 L_com 0.0078 L_cls 0.2432
+Epoch: [43][10/47]	Inf Time 4.792	Update Time 2.803	Batch Time 7.595	
+L_total 0.3508 L_com 0.0089 L_cls 0.3419
+Epoch: [43][20/47]	Inf Time 4.807	Update Time 2.793	Batch Time 7.602	
+L_total 0.4167 L_com 0.0086 L_cls 0.4082
+Epoch: [43][30/47]	Inf Time 4.806	Update Time 2.795	Batch Time 7.602	
+L_total 0.2675 L_com 0.0077 L_cls 0.2598
+Epoch: [43][40/47]	Inf Time 4.791	Update Time 2.796	Batch Time 7.588	
+L_total 0.3880 L_com 0.0079 L_cls 0.3801
+ * ACC1@ 18.519 ACC2@ 29.116
+Epoch: [44][0/47]	Inf Time 4.210	Update Time 2.812	Batch Time 9.982	
+L_total 0.4133 L_com 0.0087 L_cls 0.4046
+Epoch: [44][10/47]	Inf Time 4.786	Update Time 2.794	Batch Time 7.581	
+L_total 0.4168 L_com 0.0085 L_cls 0.4083
+Epoch: [44][20/47]	Inf Time 4.799	Update Time 2.809	Batch Time 7.609	
+L_total 0.4475 L_com 0.0087 L_cls 0.4388
+Epoch: [44][30/47]	Inf Time 4.788	Update Time 2.789	Batch Time 7.577	
+L_total 0.4549 L_com 0.0082 L_cls 0.4467
+Epoch: [44][40/47]	Inf Time 4.790	Update Time 2.802	Batch Time 7.592	
+L_total 0.3336 L_com 0.0080 L_cls 0.3256
+ * ACC1@ 18.347 ACC2@ 29.220
+Epoch: [45][0/47]	Inf Time 4.193	Update Time 2.802	Batch Time 10.137	
+L_total 0.3552 L_com 0.0080 L_cls 0.3472
+Epoch: [45][10/47]	Inf Time 4.796	Update Time 2.801	Batch Time 7.598	
+L_total 0.3401 L_com 0.0080 L_cls 0.3321
+Epoch: [45][20/47]	Inf Time 4.811	Update Time 2.799	Batch Time 7.610	
+L_total 0.4283 L_com 0.0081 L_cls 0.4202
+Epoch: [45][30/47]	Inf Time 4.797	Update Time 2.798	Batch Time 7.595	
+L_total 0.3548 L_com 0.0080 L_cls 0.3468
+Epoch: [45][40/47]	Inf Time 4.793	Update Time 2.805	Batch Time 7.599	
+L_total 0.3240 L_com 0.0078 L_cls 0.3162
+ * ACC1@ 19.054 ACC2@ 29.168
+Epoch: [46][0/47]	Inf Time 4.222	Update Time 2.795	Batch Time 10.101	
+L_total 0.2717 L_com 0.0088 L_cls 0.2629
+Epoch: [46][10/47]	Inf Time 4.801	Update Time 2.799	Batch Time 7.600	
+L_total 0.2529 L_com 0.0082 L_cls 0.2448
+Epoch: [46][20/47]	Inf Time 4.783	Update Time 2.784	Batch Time 7.568	
+L_total 0.3608 L_com 0.0072 L_cls 0.3536
+Epoch: [46][30/47]	Inf Time 4.807	Update Time 2.804	Batch Time 7.612	
+L_total 0.4638 L_com 0.0079 L_cls 0.4559
+Epoch: [46][40/47]	Inf Time 4.802	Update Time 2.804	Batch Time 7.606	
+L_total 0.4213 L_com 0.0087 L_cls 0.4126
+ * ACC1@ 18.485 ACC2@ 28.909
+Epoch: [47][0/47]	Inf Time 4.140	Update Time 2.806	Batch Time 9.418	
+L_total 0.4768 L_com 0.0076 L_cls 0.4693
+Epoch: [47][10/47]	Inf Time 4.803	Update Time 2.799	Batch Time 7.603	
+L_total 0.5526 L_com 0.0082 L_cls 0.5444
+Epoch: [47][20/47]	Inf Time 4.791	Update Time 2.803	Batch Time 7.595	
+L_total 0.3777 L_com 0.0075 L_cls 0.3702
+Epoch: [47][30/47]	Inf Time 4.819	Update Time 2.805	Batch Time 7.625	
+L_total 0.2786 L_com 0.0079 L_cls 0.2707
+Epoch: [47][40/47]	Inf Time 4.801	Update Time 2.809	Batch Time 7.610	
+L_total 0.4131 L_com 0.0077 L_cls 0.4054
+ * ACC1@ 18.588 ACC2@ 28.978
+Epoch: [48][0/47]	Inf Time 4.203	Update Time 2.802	Batch Time 9.673	
+L_total 0.3073 L_com 0.0077 L_cls 0.2997
+Epoch: [48][10/47]	Inf Time 4.794	Update Time 2.806	Batch Time 7.600	
+L_total 0.5049 L_com 0.0083 L_cls 0.4966
+Epoch: [48][20/47]	Inf Time 4.805	Update Time 2.802	Batch Time 7.607	
+L_total 0.3131 L_com 0.0077 L_cls 0.3054
+Epoch: [48][30/47]	Inf Time 4.803	Update Time 2.808	Batch Time 7.612	
+L_total 0.2622 L_com 0.0074 L_cls 0.2548
+Epoch: [48][40/47]	Inf Time 4.807	Update Time 2.803	Batch Time 7.610	
+L_total 0.3746 L_com 0.0078 L_cls 0.3669
+ * ACC1@ 18.485 ACC2@ 28.875
+Epoch: [49][0/47]	Inf Time 4.219	Update Time 2.807	Batch Time 9.974	
+L_total 0.3492 L_com 0.0083 L_cls 0.3409
+Epoch: [49][10/47]	Inf Time 4.805	Update Time 2.806	Batch Time 7.612	
+L_total 0.2719 L_com 0.0072 L_cls 0.2647
+Epoch: [49][20/47]	Inf Time 4.800	Update Time 2.794	Batch Time 7.595	
+L_total 0.4788 L_com 0.0078 L_cls 0.4710
+Epoch: [49][30/47]	Inf Time 4.810	Update Time 2.799	Batch Time 7.610	
+L_total 0.3836 L_com 0.0077 L_cls 0.3759
+Epoch: [49][40/47]	Inf Time 4.789	Update Time 2.794	Batch Time 7.584	
+L_total 0.4241 L_com 0.0076 L_cls 0.4165
+ * ACC1@ 18.467 ACC2@ 28.737
+Epoch: [50][0/47]	Inf Time 4.207	Update Time 2.806	Batch Time 9.978	
+L_total 0.4492 L_com 0.0079 L_cls 0.4413
+Epoch: [50][10/47]	Inf Time 4.805	Update Time 2.802	Batch Time 7.608	
+L_total 0.4572 L_com 0.0078 L_cls 0.4494
+Epoch: [50][20/47]	Inf Time 4.812	Update Time 2.793	Batch Time 7.606	
+L_total 0.2670 L_com 0.0079 L_cls 0.2591
+Epoch: [50][30/47]	Inf Time 4.794	Update Time 2.791	Batch Time 7.586	
+L_total 0.3263 L_com 0.0080 L_cls 0.3184
+Epoch: [50][40/47]	Inf Time 4.795	Update Time 2.806	Batch Time 7.601	
+L_total 0.3935 L_com 0.0075 L_cls 0.3860
+ * ACC1@ 18.692 ACC2@ 28.806
+Epoch: [51][0/47]	Inf Time 4.217	Update Time 2.803	Batch Time 10.027	
+L_total 0.3360 L_com 0.0071 L_cls 0.3289
+Epoch: [51][10/47]	Inf Time 4.799	Update Time 2.801	Batch Time 7.600	
+L_total 0.3846 L_com 0.0072 L_cls 0.3774
+Epoch: [51][20/47]	Inf Time 4.792	Update Time 2.805	Batch Time 7.598	
+L_total 0.4108 L_com 0.0083 L_cls 0.4026
+Epoch: [51][30/47]	Inf Time 4.797	Update Time 2.802	Batch Time 7.599	
+L_total 0.3801 L_com 0.0072 L_cls 0.3729
+Epoch: [51][40/47]	Inf Time 4.791	Update Time 2.793	Batch Time 7.585	
+L_total 0.2447 L_com 0.0073 L_cls 0.2374
+ * ACC1@ 18.485 ACC2@ 28.909
+Epoch: [52][0/47]	Inf Time 4.228	Update Time 2.794	Batch Time 10.024	
+L_total 0.3506 L_com 0.0080 L_cls 0.3427
+Epoch: [52][10/47]	Inf Time 4.799	Update Time 2.791	Batch Time 7.591	
+L_total 0.3690 L_com 0.0076 L_cls 0.3615
+Epoch: [52][20/47]	Inf Time 4.793	Update Time 2.798	Batch Time 7.591	
+L_total 0.3969 L_com 0.0074 L_cls 0.3895
+Epoch: [52][30/47]	Inf Time 4.811	Update Time 2.795	Batch Time 7.606	
+L_total 0.3617 L_com 0.0077 L_cls 0.3540
+Epoch: [52][40/47]	Inf Time 4.788	Update Time 2.794	Batch Time 7.582	
+L_total 0.3336 L_com 0.0069 L_cls 0.3267
+ * ACC1@ 18.640 ACC2@ 29.151
+Epoch: [53][0/47]	Inf Time 4.223	Update Time 2.803	Batch Time 9.638	
+L_total 0.3870 L_com 0.0071 L_cls 0.3798
+Epoch: [53][10/47]	Inf Time 4.797	Update Time 2.795	Batch Time 7.593	
+L_total 0.2979 L_com 0.0074 L_cls 0.2905
+Epoch: [53][20/47]	Inf Time 4.793	Update Time 2.799	Batch Time 7.592	
+L_total 0.3674 L_com 0.0070 L_cls 0.3605
+Epoch: [53][30/47]	Inf Time 4.788	Update Time 2.804	Batch Time 7.593	
+L_total 0.1991 L_com 0.0071 L_cls 0.1920
+Epoch: [53][40/47]	Inf Time 4.798	Update Time 2.807	Batch Time 7.605	
+L_total 0.3238 L_com 0.0074 L_cls 0.3164
+ * ACC1@ 18.312 ACC2@ 29.047
+Epoch: [54][0/47]	Inf Time 4.212	Update Time 2.800	Batch Time 9.750	
+L_total 0.3980 L_com 0.0075 L_cls 0.3905
+Epoch: [54][10/47]	Inf Time 4.793	Update Time 2.809	Batch Time 7.603	
+L_total 0.3053 L_com 0.0076 L_cls 0.2978
+Epoch: [54][20/47]	Inf Time 4.796	Update Time 2.799	Batch Time 7.596	
+L_total 0.3283 L_com 0.0070 L_cls 0.3213
+Epoch: [54][30/47]	Inf Time 4.790	Update Time 2.808	Batch Time 7.599	
+L_total 0.5184 L_com 0.0070 L_cls 0.5114
+Epoch: [54][40/47]	Inf Time 4.800	Update Time 2.804	Batch Time 7.604	
+L_total 0.3763 L_com 0.0073 L_cls 0.3690
+ * ACC1@ 18.623 ACC2@ 28.840
+Epoch: [55][0/47]	Inf Time 4.227	Update Time 2.797	Batch Time 9.996	
+L_total 0.3044 L_com 0.0072 L_cls 0.2972
+Epoch: [55][10/47]	Inf Time 4.803	Update Time 2.795	Batch Time 7.599	
+L_total 0.3695 L_com 0.0074 L_cls 0.3620
+Epoch: [55][20/47]	Inf Time 4.801	Update Time 2.801	Batch Time 7.603	
+L_total 0.4046 L_com 0.0078 L_cls 0.3968
+Epoch: [55][30/47]	Inf Time 4.804	Update Time 2.803	Batch Time 7.608	
+L_total 0.2968 L_com 0.0073 L_cls 0.2895
+Epoch: [55][40/47]	Inf Time 4.817	Update Time 2.810	Batch Time 7.628	
+L_total 0.3081 L_com 0.0067 L_cls 0.3014
+ * ACC1@ 18.588 ACC2@ 29.168
+Epoch: [56][0/47]	Inf Time 4.222	Update Time 2.802	Batch Time 9.786	
+L_total 0.4345 L_com 0.0072 L_cls 0.4272
+Epoch: [56][10/47]	Inf Time 4.811	Update Time 2.804	Batch Time 7.616	
+L_total 0.2845 L_com 0.0068 L_cls 0.2777
+Epoch: [56][20/47]	Inf Time 4.792	Update Time 2.800	Batch Time 7.593	
+L_total 0.3136 L_com 0.0069 L_cls 0.3067
+Epoch: [56][30/47]	Inf Time 4.798	Update Time 2.793	Batch Time 7.592	
+L_total 0.3104 L_com 0.0070 L_cls 0.3034
+Epoch: [56][40/47]	Inf Time 4.788	Update Time 2.806	Batch Time 7.594	
+L_total 0.3595 L_com 0.0072 L_cls 0.3523
+ * ACC1@ 18.813 ACC2@ 28.788
+Epoch: [57][0/47]	Inf Time 4.133	Update Time 2.793	Batch Time 9.322	
+L_total 0.2487 L_com 0.0068 L_cls 0.2419
+Epoch: [57][10/47]	Inf Time 4.792	Update Time 2.808	Batch Time 7.600	
+L_total 0.4281 L_com 0.0072 L_cls 0.4209
+Epoch: [57][20/47]	Inf Time 4.812	Update Time 2.799	Batch Time 7.611	
+L_total 0.3469 L_com 0.0070 L_cls 0.3399
+Epoch: [57][30/47]	Inf Time 4.806	Update Time 2.794	Batch Time 7.600	
+L_total 0.2925 L_com 0.0066 L_cls 0.2859
+Epoch: [57][40/47]	Inf Time 4.795	Update Time 2.805	Batch Time 7.600	
+L_total 0.2956 L_com 0.0066 L_cls 0.2890
+ * ACC1@ 18.882 ACC2@ 29.220
+Epoch: [58][0/47]	Inf Time 4.131	Update Time 2.795	Batch Time 9.362	
+L_total 0.3587 L_com 0.0070 L_cls 0.3517
+Epoch: [58][10/47]	Inf Time 4.785	Update Time 2.795	Batch Time 7.581	
+L_total 0.5478 L_com 0.0070 L_cls 0.5408
+Epoch: [58][20/47]	Inf Time 4.790	Update Time 2.803	Batch Time 7.593	
+L_total 0.3283 L_com 0.0067 L_cls 0.3215
+Epoch: [58][30/47]	Inf Time 4.792	Update Time 2.799	Batch Time 7.592	
+L_total 0.4290 L_com 0.0069 L_cls 0.4221
+Epoch: [58][40/47]	Inf Time 4.797	Update Time 2.787	Batch Time 7.585	
+L_total 0.3627 L_com 0.0071 L_cls 0.3556
+ * ACC1@ 19.037 ACC2@ 28.806
+Epoch: [59][0/47]	Inf Time 4.212	Update Time 2.811	Batch Time 10.137	
+L_total 0.3395 L_com 0.0071 L_cls 0.3324
+Epoch: [59][10/47]	Inf Time 4.799	Update Time 2.806	Batch Time 7.605	
+L_total 0.2677 L_com 0.0073 L_cls 0.2604
+Epoch: [59][20/47]	Inf Time 4.799	Update Time 2.799	Batch Time 7.599	
+L_total 0.3484 L_com 0.0068 L_cls 0.3416
+Epoch: [59][30/47]	Inf Time 4.810	Update Time 2.804	Batch Time 7.615	
+L_total 0.4633 L_com 0.0072 L_cls 0.4561
+Epoch: [59][40/47]	Inf Time 4.797	Update Time 2.795	Batch Time 7.592	
+L_total 0.4545 L_com 0.0071 L_cls 0.4475
+ * ACC1@ 18.278 ACC2@ 28.892
+Epoch: [60][0/47]	Inf Time 4.231	Update Time 2.808	Batch Time 10.060	
+L_total 0.4165 L_com 0.0068 L_cls 0.4097
+Epoch: [60][10/47]	Inf Time 4.794	Update Time 2.802	Batch Time 7.596	
+L_total 0.2923 L_com 0.0066 L_cls 0.2857
+Epoch: [60][20/47]	Inf Time 4.798	Update Time 2.801	Batch Time 7.600	
+L_total 0.2287 L_com 0.0068 L_cls 0.2219
+Epoch: [60][30/47]	Inf Time 4.804	Update Time 2.801	Batch Time 7.606	
+L_total 0.3842 L_com 0.0068 L_cls 0.3774
+Epoch: [60][40/47]	Inf Time 4.803	Update Time 2.800	Batch Time 7.603	
+L_total 0.2866 L_com 0.0069 L_cls 0.2797
+ * ACC1@ 18.416 ACC2@ 28.961
+Epoch: [61][0/47]	Inf Time 4.216	Update Time 2.800	Batch Time 9.783	
+L_total 0.4248 L_com 0.0064 L_cls 0.4185
+Epoch: [61][10/47]	Inf Time 4.792	Update Time 2.796	Batch Time 7.589	
+L_total 0.2672 L_com 0.0070 L_cls 0.2603
+Epoch: [61][20/47]	Inf Time 4.820	Update Time 2.798	Batch Time 7.618	
+L_total 0.4670 L_com 0.0075 L_cls 0.4596
+Epoch: [61][30/47]	Inf Time 4.800	Update Time 2.796	Batch Time 7.596	
+L_total 0.3922 L_com 0.0066 L_cls 0.3855
+Epoch: [61][40/47]	Inf Time 4.789	Update Time 2.795	Batch Time 7.585	
+L_total 0.3822 L_com 0.0072 L_cls 0.3750
+ * ACC1@ 18.502 ACC2@ 28.909
+Epoch: [62][0/47]	Inf Time 4.216	Update Time 2.796	Batch Time 10.111	
+L_total 0.3464 L_com 0.0065 L_cls 0.3399
+Epoch: [62][10/47]	Inf Time 4.800	Update Time 2.803	Batch Time 7.604	
+L_total 0.4315 L_com 0.0066 L_cls 0.4249
+Epoch: [62][20/47]	Inf Time 4.787	Update Time 2.808	Batch Time 7.595	
+L_total 0.4196 L_com 0.0071 L_cls 0.4124
+Epoch: [62][30/47]	Inf Time 4.788	Update Time 2.808	Batch Time 7.598	
+L_total 0.4297 L_com 0.0071 L_cls 0.4226
+Epoch: [62][40/47]	Inf Time 4.802	Update Time 2.805	Batch Time 7.607	
+L_total 0.3692 L_com 0.0070 L_cls 0.3622
+ * ACC1@ 18.485 ACC2@ 29.116
+Epoch: [63][0/47]	Inf Time 4.145	Update Time 2.803	Batch Time 9.314	
+L_total 0.2721 L_com 0.0068 L_cls 0.2654
+Epoch: [63][10/47]	Inf Time 4.783	Update Time 2.796	Batch Time 7.580	
+L_total 0.2969 L_com 0.0068 L_cls 0.2901
+Epoch: [63][20/47]	Inf Time 4.798	Update Time 2.791	Batch Time 7.589	
+L_total 0.3434 L_com 0.0069 L_cls 0.3365
+Epoch: [63][30/47]	Inf Time 4.802	Update Time 2.804	Batch Time 7.607	
+L_total 0.3727 L_com 0.0064 L_cls 0.3663
+Epoch: [63][40/47]	Inf Time 4.785	Update Time 2.800	Batch Time 7.587	
+L_total 0.3413 L_com 0.0068 L_cls 0.3345
+ * ACC1@ 18.450 ACC2@ 29.013
+Epoch: [64][0/47]	Inf Time 4.223	Update Time 2.801	Batch Time 9.854	
+L_total 0.2516 L_com 0.0066 L_cls 0.2451
+Epoch: [64][10/47]	Inf Time 4.801	Update Time 2.797	Batch Time 7.598	
+L_total 0.3402 L_com 0.0073 L_cls 0.3330
+Epoch: [64][20/47]	Inf Time 4.793	Update Time 2.815	Batch Time 7.609	
+L_total 0.5187 L_com 0.0071 L_cls 0.5116
+Epoch: [64][30/47]	Inf Time 4.801	Update Time 2.800	Batch Time 7.602	
+L_total 0.3869 L_com 0.0066 L_cls 0.3802
+Epoch: [64][40/47]	Inf Time 4.797	Update Time 2.799	Batch Time 7.596	
+L_total 0.3648 L_com 0.0069 L_cls 0.3579
+ * ACC1@ 18.502 ACC2@ 29.065
+Epoch: [65][0/47]	Inf Time 4.217	Update Time 2.808	Batch Time 10.139	
+L_total 0.3243 L_com 0.0064 L_cls 0.3179
+Epoch: [65][10/47]	Inf Time 4.797	Update Time 2.800	Batch Time 7.598	
+L_total 0.3201 L_com 0.0068 L_cls 0.3133
+Epoch: [65][20/47]	Inf Time 4.808	Update Time 2.803	Batch Time 7.611	
+L_total 0.4779 L_com 0.0072 L_cls 0.4708
+Epoch: [65][30/47]	Inf Time 4.807	Update Time 2.808	Batch Time 7.615	
+L_total 0.3442 L_com 0.0062 L_cls 0.3380
+Epoch: [65][40/47]	Inf Time 4.792	Update Time 2.802	Batch Time 7.594	
+L_total 0.3152 L_com 0.0070 L_cls 0.3081
+ * ACC1@ 18.571 ACC2@ 29.065
+Epoch: [66][0/47]	Inf Time 4.134	Update Time 2.804	Batch Time 9.295	
+L_total 0.3101 L_com 0.0063 L_cls 0.3039
+Epoch: [66][10/47]	Inf Time 4.792	Update Time 2.807	Batch Time 7.600	
+L_total 0.2061 L_com 0.0065 L_cls 0.1995
+Epoch: [66][20/47]	Inf Time 4.799	Update Time 2.806	Batch Time 7.605	
+L_total 0.3589 L_com 0.0066 L_cls 0.3523
+Epoch: [66][30/47]	Inf Time 4.806	Update Time 2.805	Batch Time 7.611	
+L_total 0.2824 L_com 0.0069 L_cls 0.2755
+Epoch: [66][40/47]	Inf Time 4.794	Update Time 2.805	Batch Time 7.600	
+L_total 0.3187 L_com 0.0066 L_cls 0.3121
+ * ACC1@ 18.398 ACC2@ 29.151
+Epoch: [67][0/47]	Inf Time 4.199	Update Time 2.799	Batch Time 9.563	
+L_total 0.3123 L_com 0.0067 L_cls 0.3057
+Epoch: [67][10/47]	Inf Time 4.805	Update Time 2.802	Batch Time 7.608	
+L_total 0.2574 L_com 0.0062 L_cls 0.2512
+Epoch: [67][20/47]	Inf Time 4.792	Update Time 2.807	Batch Time 7.601	
+L_total 0.3993 L_com 0.0065 L_cls 0.3928
+Epoch: [67][30/47]	Inf Time 4.804	Update Time 2.800	Batch Time 7.606	
+L_total 0.3595 L_com 0.0066 L_cls 0.3529
+Epoch: [67][40/47]	Inf Time 4.804	Update Time 2.801	Batch Time 7.606	
+L_total 0.4335 L_com 0.0066 L_cls 0.4270
+ * ACC1@ 18.554 ACC2@ 29.203
+Epoch: [68][0/47]	Inf Time 4.246	Update Time 2.790	Batch Time 9.924	
+L_total 0.2974 L_com 0.0064 L_cls 0.2910
+Epoch: [68][10/47]	Inf Time 4.782	Update Time 2.794	Batch Time 7.577	
+L_total 0.3198 L_com 0.0063 L_cls 0.3135
+Epoch: [68][20/47]	Inf Time 4.796	Update Time 2.797	Batch Time 7.594	
+L_total 0.2574 L_com 0.0072 L_cls 0.2501
+Epoch: [68][30/47]	Inf Time 4.794	Update Time 2.801	Batch Time 7.595	
+L_total 0.4016 L_com 0.0067 L_cls 0.3949
+Epoch: [68][40/47]	Inf Time 4.801	Update Time 2.796	Batch Time 7.598	
+L_total 0.3504 L_com 0.0068 L_cls 0.3436
+ * ACC1@ 18.709 ACC2@ 29.047
+Epoch: [69][0/47]	Inf Time 4.136	Update Time 2.797	Batch Time 9.200	
+L_total 0.3257 L_com 0.0064 L_cls 0.3192
+Epoch: [69][10/47]	Inf Time 4.791	Update Time 2.797	Batch Time 7.589	
+L_total 0.3261 L_com 0.0069 L_cls 0.3192
+Epoch: [69][20/47]	Inf Time 4.808	Update Time 2.809	Batch Time 7.618	
+L_total 0.4173 L_com 0.0066 L_cls 0.4108
+Epoch: [69][30/47]	Inf Time 4.811	Update Time 2.791	Batch Time 7.602	
+L_total 0.3400 L_com 0.0070 L_cls 0.3329
+Epoch: [69][40/47]	Inf Time 4.797	Update Time 2.802	Batch Time 7.600	
+L_total 0.2850 L_com 0.0065 L_cls 0.2786
+ * ACC1@ 18.536 ACC2@ 29.013
+Epoch: [70][0/47]	Inf Time 4.144	Update Time 2.797	Batch Time 9.287	
+L_total 0.4330 L_com 0.0072 L_cls 0.4258
+Epoch: [70][10/47]	Inf Time 4.803	Update Time 2.802	Batch Time 7.606	
+L_total 0.4525 L_com 0.0071 L_cls 0.4453
+Epoch: [70][20/47]	Inf Time 4.786	Update Time 2.795	Batch Time 7.581	
+L_total 0.3625 L_com 0.0072 L_cls 0.3553
+Epoch: [70][30/47]	Inf Time 4.798	Update Time 2.805	Batch Time 7.603	
+L_total 0.3616 L_com 0.0064 L_cls 0.3552
+Epoch: [70][40/47]	Inf Time 4.809	Update Time 2.808	Batch Time 7.618	
+L_total 0.2662 L_com 0.0062 L_cls 0.2599
+ * ACC1@ 18.416 ACC2@ 28.926
+Epoch: [71][0/47]	Inf Time 4.125	Update Time 2.802	Batch Time 9.391	
+L_total 0.4626 L_com 0.0069 L_cls 0.4557
+Epoch: [71][10/47]	Inf Time 4.812	Update Time 2.795	Batch Time 7.608	
+L_total 0.2805 L_com 0.0062 L_cls 0.2742
+Epoch: [71][20/47]	Inf Time 4.788	Update Time 2.798	Batch Time 7.587	
+L_total 0.3376 L_com 0.0068 L_cls 0.3309
+Epoch: [71][30/47]	Inf Time 4.819	Update Time 2.791	Batch Time 7.610	
+L_total 0.5326 L_com 0.0078 L_cls 0.5247
+Epoch: [71][40/47]	Inf Time 4.804	Update Time 2.804	Batch Time 7.608	
+L_total 0.4045 L_com 0.0066 L_cls 0.3979
+ * ACC1@ 18.640 ACC2@ 28.926
+Epoch: [72][0/47]	Inf Time 4.206	Update Time 2.793	Batch Time 10.337	
+L_total 0.3542 L_com 0.0067 L_cls 0.3475
+Epoch: [72][10/47]	Inf Time 4.792	Update Time 2.802	Batch Time 7.594	
+L_total 0.3097 L_com 0.0068 L_cls 0.3029
+Epoch: [72][20/47]	Inf Time 4.805	Update Time 2.796	Batch Time 7.602	
+L_total 0.3151 L_com 0.0064 L_cls 0.3087
+Epoch: [72][30/47]	Inf Time 4.790	Update Time 2.795	Batch Time 7.586	
+L_total 0.4229 L_com 0.0069 L_cls 0.4160
+Epoch: [72][40/47]	Inf Time 4.821	Update Time 2.802	Batch Time 7.624	
+L_total 0.3188 L_com 0.0064 L_cls 0.3124
+ * ACC1@ 18.571 ACC2@ 29.030
+Epoch: [73][0/47]	Inf Time 4.130	Update Time 2.794	Batch Time 9.188	
+L_total 0.3954 L_com 0.0064 L_cls 0.3890
+Epoch: [73][10/47]	Inf Time 4.792	Update Time 2.801	Batch Time 7.594	
+L_total 0.2630 L_com 0.0066 L_cls 0.2563
+Epoch: [73][20/47]	Inf Time 4.806	Update Time 2.798	Batch Time 7.604	
+L_total 0.4198 L_com 0.0070 L_cls 0.4128
+Epoch: [73][30/47]	Inf Time 4.790	Update Time 2.797	Batch Time 7.588	
+L_total 0.3891 L_com 0.0069 L_cls 0.3822
+Epoch: [73][40/47]	Inf Time 4.810	Update Time 2.800	Batch Time 7.610	
+L_total 0.3190 L_com 0.0066 L_cls 0.3124
+ * ACC1@ 18.554 ACC2@ 29.099
+Epoch: [74][0/47]	Inf Time 4.252	Update Time 2.796	Batch Time 9.637	
+L_total 0.2176 L_com 0.0064 L_cls 0.2112
+Epoch: [74][10/47]	Inf Time 4.783	Update Time 2.795	Batch Time 7.579	
+L_total 0.3553 L_com 0.0067 L_cls 0.3486
+Epoch: [74][20/47]	Inf Time 4.791	Update Time 2.809	Batch Time 7.601	
+L_total 0.3957 L_com 0.0071 L_cls 0.3887
+Epoch: [74][30/47]	Inf Time 4.810	Update Time 2.798	Batch Time 7.609	
+L_total 0.2486 L_com 0.0067 L_cls 0.2419
+Epoch: [74][40/47]	Inf Time 4.794	Update Time 2.806	Batch Time 7.600	
+L_total 0.3720 L_com 0.0068 L_cls 0.3652
+ * ACC1@ 18.554 ACC2@ 28.996
+Epoch: [75][0/47]	Inf Time 4.246	Update Time 2.806	Batch Time 9.797	
+L_total 0.4534 L_com 0.0069 L_cls 0.4464
+Epoch: [75][10/47]	Inf Time 4.809	Update Time 2.809	Batch Time 7.618	
+L_total 0.4116 L_com 0.0071 L_cls 0.4046
+Epoch: [75][20/47]	Inf Time 4.796	Update Time 2.795	Batch Time 7.591	
+L_total 0.4222 L_com 0.0073 L_cls 0.4149
+Epoch: [75][30/47]	Inf Time 4.800	Update Time 2.803	Batch Time 7.603	
+L_total 0.3034 L_com 0.0064 L_cls 0.2970
+Epoch: [75][40/47]	Inf Time 4.795	Update Time 2.800	Batch Time 7.595	
+L_total 0.3646 L_com 0.0066 L_cls 0.3581
+ * ACC1@ 18.416 ACC2@ 28.892
+Epoch: [76][0/47]	Inf Time 4.236	Update Time 2.804	Batch Time 10.099	
+L_total 0.2895 L_com 0.0067 L_cls 0.2828
+Epoch: [76][10/47]	Inf Time 4.793	Update Time 2.799	Batch Time 7.592	
+L_total 0.3639 L_com 0.0068 L_cls 0.3571
+Epoch: [76][20/47]	Inf Time 4.810	Update Time 2.803	Batch Time 7.614	
+L_total 0.3236 L_com 0.0065 L_cls 0.3171
+Epoch: [76][30/47]	Inf Time 4.812	Update Time 2.809	Batch Time 7.621	
+L_total 0.2668 L_com 0.0070 L_cls 0.2598
+Epoch: [76][40/47]	Inf Time 4.810	Update Time 2.804	Batch Time 7.615	
+L_total 0.2342 L_com 0.0066 L_cls 0.2276
+ * ACC1@ 18.554 ACC2@ 28.892
+Epoch: [77][0/47]	Inf Time 4.234	Update Time 2.801	Batch Time 10.181	
+L_total 0.4005 L_com 0.0072 L_cls 0.3933
+Epoch: [77][10/47]	Inf Time 4.794	Update Time 2.807	Batch Time 7.601	
+L_total 0.3311 L_com 0.0069 L_cls 0.3241
+Epoch: [77][20/47]	Inf Time 4.787	Update Time 2.794	Batch Time 7.582	
+L_total 0.4339 L_com 0.0068 L_cls 0.4271
+Epoch: [77][30/47]	Inf Time 4.797	Update Time 2.808	Batch Time 7.605	
+L_total 0.4527 L_com 0.0074 L_cls 0.4453
+Epoch: [77][40/47]	Inf Time 4.809	Update Time 2.801	Batch Time 7.611	
+L_total 0.4645 L_com 0.0070 L_cls 0.4575
+ * ACC1@ 18.398 ACC2@ 28.961
+Epoch: [78][0/47]	Inf Time 4.216	Update Time 2.802	Batch Time 9.837	
+L_total 0.4517 L_com 0.0074 L_cls 0.4443
+Epoch: [78][10/47]	Inf Time 4.807	Update Time 2.805	Batch Time 7.613	
+L_total 0.2402 L_com 0.0065 L_cls 0.2337
+Epoch: [78][20/47]	Inf Time 4.806	Update Time 2.801	Batch Time 7.607	
+L_total 0.4354 L_com 0.0071 L_cls 0.4283
+Epoch: [78][30/47]	Inf Time 4.810	Update Time 2.807	Batch Time 7.617	
+L_total 0.2214 L_com 0.0065 L_cls 0.2149
+Epoch: [78][40/47]	Inf Time 4.806	Update Time 2.811	Batch Time 7.618	
+L_total 0.2937 L_com 0.0064 L_cls 0.2873
+ * ACC1@ 18.571 ACC2@ 29.030
+Epoch: [79][0/47]	Inf Time 4.218	Update Time 2.798	Batch Time 9.773	
+L_total 0.3868 L_com 0.0070 L_cls 0.3798
+Epoch: [79][10/47]	Inf Time 4.799	Update Time 2.808	Batch Time 7.609	
+L_total 0.3476 L_com 0.0066 L_cls 0.3410
+Epoch: [79][20/47]	Inf Time 4.806	Update Time 2.797	Batch Time 7.603	
+L_total 0.3770 L_com 0.0066 L_cls 0.3703
+Epoch: [79][30/47]	Inf Time 4.785	Update Time 2.798	Batch Time 7.584	
+L_total 0.3486 L_com 0.0065 L_cls 0.3422
+Epoch: [79][40/47]	Inf Time 4.812	Update Time 2.794	Batch Time 7.607	
+L_total 0.3210 L_com 0.0070 L_cls 0.3140
+ * ACC1@ 18.640 ACC2@ 28.944
+Epoch: [80][0/47]	Inf Time 4.179	Update Time 2.802	Batch Time 10.131	
+L_total 0.3649 L_com 0.0061 L_cls 0.3588
+Epoch: [80][10/47]	Inf Time 4.809	Update Time 2.806	Batch Time 7.616	
+L_total 0.3719 L_com 0.0070 L_cls 0.3649
+Epoch: [80][20/47]	Inf Time 4.820	Update Time 2.797	Batch Time 7.617	
+L_total 0.3904 L_com 0.0070 L_cls 0.3835
+Epoch: [80][30/47]	Inf Time 4.793	Update Time 2.798	Batch Time 7.591	
+L_total 0.3035 L_com 0.0067 L_cls 0.2967
+Epoch: [80][40/47]	Inf Time 4.803	Update Time 2.810	Batch Time 7.613	
+L_total 0.4495 L_com 0.0068 L_cls 0.4428
+ * ACC1@ 18.554 ACC2@ 28.944
+Epoch: [81][0/47]	Inf Time 4.227	Update Time 2.800	Batch Time 9.507	
+L_total 0.3881 L_com 0.0074 L_cls 0.3807
+Epoch: [81][10/47]	Inf Time 4.809	Update Time 2.805	Batch Time 7.615	
+L_total 0.3399 L_com 0.0066 L_cls 0.3333
+Epoch: [81][20/47]	Inf Time 4.803	Update Time 2.789	Batch Time 7.593	
+L_total 0.5216 L_com 0.0072 L_cls 0.5144
+Epoch: [81][30/47]	Inf Time 4.802	Update Time 2.797	Batch Time 7.600	
+L_total 0.3189 L_com 0.0068 L_cls 0.3121
+Epoch: [81][40/47]	Inf Time 4.792	Update Time 2.808	Batch Time 7.601	
+L_total 0.3753 L_com 0.0069 L_cls 0.3683
+ * ACC1@ 18.744 ACC2@ 29.151
+Epoch: [82][0/47]	Inf Time 4.229	Update Time 2.800	Batch Time 10.111	
+L_total 0.3346 L_com 0.0067 L_cls 0.3280
+Epoch: [82][10/47]	Inf Time 4.788	Update Time 2.793	Batch Time 7.581	
+L_total 0.4019 L_com 0.0065 L_cls 0.3954
+Epoch: [82][20/47]	Inf Time 4.816	Update Time 2.800	Batch Time 7.617	
+L_total 0.2900 L_com 0.0067 L_cls 0.2833
+Epoch: [82][30/47]	Inf Time 4.811	Update Time 2.811	Batch Time 7.623	
+L_total 0.4632 L_com 0.0072 L_cls 0.4560
+Epoch: [82][40/47]	Inf Time 4.810	Update Time 2.804	Batch Time 7.615	
+L_total 0.4061 L_com 0.0071 L_cls 0.3990
+ * ACC1@ 18.485 ACC2@ 29.065
+Epoch: [83][0/47]	Inf Time 4.202	Update Time 2.796	Batch Time 10.108	
+L_total 0.4436 L_com 0.0069 L_cls 0.4367
+Epoch: [83][10/47]	Inf Time 4.803	Update Time 2.799	Batch Time 7.603	
+L_total 0.2940 L_com 0.0069 L_cls 0.2871
+Epoch: [83][20/47]	Inf Time 4.808	Update Time 2.802	Batch Time 7.611	
+L_total 0.2750 L_com 0.0066 L_cls 0.2684
+Epoch: [83][30/47]	Inf Time 4.796	Update Time 2.799	Batch Time 7.596	
+L_total 0.3139 L_com 0.0068 L_cls 0.3071
+Epoch: [83][40/47]	Inf Time 4.803	Update Time 2.806	Batch Time 7.609	
+L_total 0.2546 L_com 0.0063 L_cls 0.2484
+ * ACC1@ 18.467 ACC2@ 28.996
+Epoch: [84][0/47]	Inf Time 4.221	Update Time 2.798	Batch Time 9.475	
+L_total 0.4728 L_com 0.0071 L_cls 0.4657
+Epoch: [84][10/47]	Inf Time 4.795	Update Time 2.805	Batch Time 7.600	
+L_total 0.2670 L_com 0.0065 L_cls 0.2605
+Epoch: [84][20/47]	Inf Time 4.796	Update Time 2.796	Batch Time 7.593	
+L_total 0.3122 L_com 0.0065 L_cls 0.3057
+Epoch: [84][30/47]	Inf Time 4.812	Update Time 2.801	Batch Time 7.614	
+L_total 0.3505 L_com 0.0068 L_cls 0.3436
+Epoch: [84][40/47]	Inf Time 4.814	Update Time 2.805	Batch Time 7.619	
+L_total 0.2689 L_com 0.0067 L_cls 0.2621
+ * ACC1@ 18.502 ACC2@ 29.047
+Epoch: [85][0/47]	Inf Time 4.183	Update Time 2.802	Batch Time 10.164	
+L_total 0.3646 L_com 0.0068 L_cls 0.3578
+Epoch: [85][10/47]	Inf Time 4.799	Update Time 2.788	Batch Time 7.587	
+L_total 0.3277 L_com 0.0066 L_cls 0.3211
+Epoch: [85][20/47]	Inf Time 4.801	Update Time 2.802	Batch Time 7.604	
+L_total 0.2521 L_com 0.0061 L_cls 0.2461
+Epoch: [85][30/47]	Inf Time 4.800	Update Time 2.801	Batch Time 7.602	
+L_total 0.3818 L_com 0.0068 L_cls 0.3751
+Epoch: [85][40/47]	Inf Time 4.820	Update Time 2.800	Batch Time 7.621	
+L_total 0.3713 L_com 0.0069 L_cls 0.3644
+ * ACC1@ 18.381 ACC2@ 28.926
+Epoch: [86][0/47]	Inf Time 4.244	Update Time 2.794	Batch Time 9.918	
+L_total 0.3337 L_com 0.0067 L_cls 0.3269
+Epoch: [86][10/47]	Inf Time 4.789	Update Time 2.796	Batch Time 7.586	
+L_total 0.3210 L_com 0.0067 L_cls 0.3144
+Epoch: [86][20/47]	Inf Time 4.799	Update Time 2.794	Batch Time 7.593	
+L_total 0.3406 L_com 0.0065 L_cls 0.3341
+Epoch: [86][30/47]	Inf Time 4.811	Update Time 2.805	Batch Time 7.617	
+L_total 0.3000 L_com 0.0066 L_cls 0.2934
+Epoch: [86][40/47]	Inf Time 4.788	Update Time 2.797	Batch Time 7.586	
+L_total 0.5110 L_com 0.0071 L_cls 0.5039
+ * ACC1@ 18.364 ACC2@ 28.926
+Epoch: [87][0/47]	Inf Time 4.208	Update Time 2.795	Batch Time 10.088	
+L_total 0.4003 L_com 0.0068 L_cls 0.3935
+Epoch: [87][10/47]	Inf Time 4.794	Update Time 2.809	Batch Time 7.603	
+L_total 0.3190 L_com 0.0065 L_cls 0.3125
+Epoch: [87][20/47]	Inf Time 4.800	Update Time 2.799	Batch Time 7.600	
+L_total 0.4684 L_com 0.0069 L_cls 0.4615
+Epoch: [87][30/47]	Inf Time 4.806	Update Time 2.794	Batch Time 7.601	
+L_total 0.2573 L_com 0.0064 L_cls 0.2509
+Epoch: [87][40/47]	Inf Time 4.805	Update Time 2.805	Batch Time 7.611	
+L_total 0.2493 L_com 0.0066 L_cls 0.2427
+ * ACC1@ 18.554 ACC2@ 29.013
+Epoch: [88][0/47]	Inf Time 4.188	Update Time 2.800	Batch Time 9.402	
+L_total 0.4315 L_com 0.0069 L_cls 0.4246
+Epoch: [88][10/47]	Inf Time 4.798	Update Time 2.791	Batch Time 7.589	
+L_total 0.4629 L_com 0.0072 L_cls 0.4557
+Epoch: [88][20/47]	Inf Time 4.808	Update Time 2.808	Batch Time 7.616	
+L_total 0.2729 L_com 0.0065 L_cls 0.2664
+Epoch: [88][30/47]	Inf Time 4.808	Update Time 2.805	Batch Time 7.613	
+L_total 0.3468 L_com 0.0066 L_cls 0.3402
+Epoch: [88][40/47]	Inf Time 4.808	Update Time 2.802	Batch Time 7.611	
+L_total 0.3346 L_com 0.0066 L_cls 0.3279
+ * ACC1@ 18.674 ACC2@ 29.065
+Epoch: [89][0/47]	Inf Time 4.215	Update Time 2.790	Batch Time 9.886	
+L_total 0.3361 L_com 0.0067 L_cls 0.3294
+Epoch: [89][10/47]	Inf Time 4.811	Update Time 2.807	Batch Time 7.619	
+L_total 0.2964 L_com 0.0069 L_cls 0.2894
+Epoch: [89][20/47]	Inf Time 4.786	Update Time 2.797	Batch Time 7.584	
+L_total 0.3934 L_com 0.0067 L_cls 0.3867
+Epoch: [89][30/47]	Inf Time 4.796	Update Time 2.797	Batch Time 7.593	
+L_total 0.3984 L_com 0.0069 L_cls 0.3914
+Epoch: [89][40/47]	Inf Time 4.802	Update Time 2.794	Batch Time 7.597	
+L_total 0.3029 L_com 0.0069 L_cls 0.2960
+ * ACC1@ 18.416 ACC2@ 29.065

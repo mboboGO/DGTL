@@ -110,10 +110,10 @@ def main():
     ''' data load info '''
     data_info = h5py.File(os.path.join('./data',args.data,'data_info.h5'), 'r')
     img_path = str(data_info['img_path'][...]).replace("b'",'').replace("'",'')
-    args.coarse_att = torch.from_numpy(data_info['coarse_att'][...]).cuda()
-    args.fine_att = torch.from_numpy(data_info['fine_att'][...]).cuda()
+    args.c_att = torch.from_numpy(data_info['coarse_att'][...]).cuda()
+    args.f_att = torch.from_numpy(data_info['fine_att'][...]).cuda()
     args.trans_map = torch.from_numpy(data_info['trans_map'][...]).cuda()
-    args.num_classes,args.sf_size = args.coarse_att.size()
+    args.num_classes,args.sf_size = args.c_att.size()
 
     ''' model building '''
     if args.pretrained:
@@ -139,7 +139,12 @@ def main():
     criterion = criterion.cuda(args.gpu)
     
     ''' optimizer '''
-    optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), args.lr,
+    cls_params = [v for k, v in model.named_parameters() if 'proj2' not in k]
+    trans_params = [v for k, v in model.named_parameters() if 'proj2' in k]
+    
+    cls_optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, cls_params), args.lr,
+                                betas=(0.5,0.999),weight_decay=args.weight_decay)
+    trans_optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, trans_params), args.lr,
                                 betas=(0.5,0.999),weight_decay=args.weight_decay)
 
     ''' optionally resume from a checkpoint'''
@@ -185,10 +190,11 @@ def main():
     for epoch in range(args.start_epoch, args.epochs):
         if args.distributed:
             train_sampler.set_epoch(epoch)
-        adjust_learning_rate(optimizer, epoch)
+        adjust_learning_rate(cls_optimizer, epoch)
+        adjust_learning_rate(trans_optimizer, epoch)
 
         # train for one epoch
-        train(train_loader, model, criterion, optimizer, epoch,is_fix=args.is_fix)
+        train(train_loader, model, criterion, cls_optimizer, trans_optimizer, epoch,is_fix=args.is_fix)
         
         # evaluate on validation set
         prec1 = validate(val_loader, model, criterion)
@@ -212,7 +218,7 @@ def main():
             },filename=save_path)
             print('saving!!!!')
 
-def train(train_loader, model, criterion, optimizer, epoch,is_fix):    
+def train(train_loader, model, criterion, cls_optimizer, trans_optimizer, epoch,is_fix):    
     # switch to train mode
     model.train()
     if(is_fix):
@@ -227,15 +233,18 @@ def train(train_loader, model, criterion, optimizer, epoch,is_fix):
 
         # compute output
         start = time.time()
-        logits,feats = model(input,args.coarse_att)
+        logits,feats = model(input,args.c_att,args.f_att)
         inf_time = time.time()-start
         
         # compute gradient and do SGD step
         start = time.time()
-        total_loss,L_com, L_cls = criterion(target,logits)
-        optimizer.zero_grad()
-        total_loss.backward()
-        optimizer.step()
+        L_cls,L_sem,L_trans = criterion(target,logits)
+        cls_optimizer.zero_grad()
+        (L_cls+L_sem).backward(retain_graph=True)        
+        cls_optimizer.step()
+        trans_optimizer.zero_grad()
+        (L_trans).backward()
+        trans_optimizer.step()
         update_time = time.time()-start
         
         batch_time = time.time()-batch_start
@@ -247,7 +256,7 @@ def train(train_loader, model, criterion, optimizer, epoch,is_fix):
                   'Update Time {:.3f}\t'
                   'Batch Time {:.3f}\t'.format(epoch,i,
                   len(train_loader),inf_time,update_time,batch_time))
-            print('L_total {:.4f} L_com {:.4f} L_cls {:.4f}'.format(total_loss.item(),L_com.item(),L_cls.item()))
+            print('L_cls {:.4f} L_sem {:.4f} L_trans {:.4f}'.format(L_cls.item(),L_sem.item(),L_trans.item()))
 
 def validate(val_loader, model, criterion):
     acc1 = AverageMeter()
@@ -265,16 +274,16 @@ def validate(val_loader, model, criterion):
             target_f = target_f.cuda(args.gpu, non_blocking=True)
             
             # inference
-            logits,feats = model(input,args.fine_att)
+            logits,feats = model(input,args.c_att,args.f_att)
     
             # measure accuracy and record loss
-            prec1, prec5 = accuracy(logits[0], target_f, topk=(1, 5))
+            prec1, prec5 = accuracy(logits[2], target_f, topk=(1, 5))
             acc1.update(prec1[0], input.size(0))
             # opt
-            coarse_logit = logits[1].cpu().numpy();
-            coarse_pre = np.argmax(coarse_logit, axis=1)
-            fine_logits = logits[0]*args.trans_map[coarse_pre,:].float()
-            prec1, prec5 = accuracy(fine_logits, target_f, topk=(1, 5))
+            c_logit = logits[0].cpu().numpy();
+            c_pre = np.argmax(c_logit, axis=1)
+            f_logit = logits[2]*args.trans_map[c_pre,:].float()
+            prec1, prec5 = accuracy(f_logit, target_f, topk=(1, 5))
             acc2.update(prec1[0], input.size(0))
        
     print(' * ACC1@ {:.3f} ACC2@ {:.3f}'.format(acc1.avg,acc2.avg))

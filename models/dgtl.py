@@ -12,7 +12,7 @@ from models.operations import *
 import re
 from torch.utils.model_zoo import load_url as load_state_dict_from_url
 
-__all__ = ['base']
+__all__ = ['dgtl']
        
 def conv3x3(in_planes, out_planes, stride=1):
     """3x3 convolution with padding"""
@@ -125,14 +125,15 @@ class Model(nn.Module):
             for p in self.parameters():
                 p.requires_grad=False
             
-                
-        if 'densenet' in self.arch:
-            feat_dim = 1920
-        else:
-            feat_dim = 2048
-
+        feat_dim = 2048
         ''' Semantic-Visual Module '''
-        self.proj = nn.Sequential(
+        self.proj1 = nn.Sequential(
+            nn.Conv2d(feat_dim, feat_dim, kernel_size=1, stride=1, padding=0,bias=False),
+            nn.BatchNorm2d(feat_dim),
+            nn.ReLU(inplace=True),
+            nn.AdaptiveAvgPool2d(1),
+        )
+        self.proj2 = nn.Sequential(
             nn.Conv2d(feat_dim, feat_dim, kernel_size=1, stride=1, padding=0,bias=False),
             nn.BatchNorm2d(feat_dim),
             nn.ReLU(inplace=True),
@@ -173,7 +174,7 @@ class Model(nn.Module):
 
         return nn.Sequential(*layers)
 
-    def forward(self, x, sf):
+    def forward(self, x, c_att,f_att):
         # backbone
         x = self.conv1(x)
         x = self.bn1(x)
@@ -187,36 +188,52 @@ class Model(nn.Module):
         last_conv = x
 		
         ''' s2v Module '''
-        x = self.proj(last_conv).view(last_conv.size(0),-1)
-        classifier = self.sem(sf)
-        w_norm = F.normalize(classifier, p=2, dim=1)
-        x_norm = F.normalize(x, p=2, dim=1)
-        logit = x_norm.mm(w_norm.permute(1,0))
-        logit_aux = self.cls(x)
+        x1 = self.proj1(last_conv).view(last_conv.size(0),-1)
+        x2 = self.proj2(last_conv).view(last_conv.size(0),-1)
         
-        return (logit,logit_aux),(x)
+        # cls
+        logit_cls = self.cls(x1)
+        sem_cls = self.sem(c_att)
+        w_norm = F.normalize(sem_cls, p=2, dim=1)
+        x_norm = F.normalize(x1, p=2, dim=1)
+        logit_sem = x_norm.mm(w_norm.permute(1,0))
+        
+        # trans
+        sem_cls = self.sem(f_att)
+        w_norm = F.normalize(sem_cls, p=2, dim=1)
+        x_norm = F.normalize(x2, p=2, dim=1)
+        logit_trans = x_norm.mm(w_norm.permute(1,0))
+        
+        
+        return (logit_cls,logit_sem,logit_trans),(last_conv)
 		
 class Loss(nn.Module):
     def __init__(self, args):
         super(Loss, self).__init__()
 		
         self.cls_loss = nn.CrossEntropyLoss()
+        self.trans_map = args.trans_map
         
     def forward(self, label, logits):
-        logit = logits[0]
-        logit_aux = logits[1]
+        logit_cls = logits[0]
+        logit_sem = logits[1]
+        logit_trans = logits[2]
         
         ''' Loss '''
-        idx = torch.arange(logit.size(0)).long()
-        L_com = (1-logit[idx,label]).mean()
+        # coarse
+        L_cls = self.cls_loss(logit_cls,label)
+        idx = torch.arange(logit_sem.size(0)).long()
+        L_sem = (1-logit_sem[idx,label]).mean()
         
-        L_cls = self.cls_loss(logit_aux,label)
+        # fine
+        idx = self.trans_map[label,:].float()
+        label_ = (logit_trans*idx).argmax(dim=1).long()
+        num = torch.arange(logit_trans.size(0)).long()
+        L_trans = (1-logit_trans[num,label_]).mean()
         
-        total_loss = L_com + L_cls
+        return L_cls,L_sem,L_trans
 		
-        return total_loss,L_com,L_cls
-		
-def base(pretrained=False, loss_params=None, args=None):
+def dgtl(pretrained=False, loss_params=None, args=None):
     """Constructs a ResNet-101 model.
 
     Args:

@@ -1,0 +1,98 @@
+Namespace(arch='our', backbone='resnet101', batch_size=16, data='cub', dist_backend='gloo', dist_url='tcp://224.66.41.62:23456', epoch_decay=30, epochs=90, gpu=None, is_fix=False, lr=0.0001, momentum=0.9, pretrained=False, print_freq=10, resume='./cub/checkpoints/our/fix.model', save_path='./cub/checkpoints/our', seed=None, start_epoch=0, weight_decay=0.0001, workers=3, world_size=1)
+==> random seed: 9764
+=> creating model 'our'
+=> is the backbone fixed: 'False'
+=> loading checkpoint './cub/checkpoints/our/fix.model'
+=> pretrained acc 29.8585
+=> loaded checkpoint './cub/checkpoints/our/fix.model' (epoch 66)
+Epoch: [0][0/375]	Inf Time 6.261	Update Time 6.963	Batch Time 13.859	
+L_cls 1.8463 L_sem 0.7868 L_trans 0.6274
+Epoch: [0][10/375]	Inf Time 0.998	Update Time 3.474	Batch Time 4.473	
+L_cls 1.3730 L_sem 0.4505 L_trans 0.2612
+Epoch: [0][20/375]	Inf Time 0.994	Update Time 3.480	Batch Time 4.474	
+L_cls 0.6276 L_sem 0.2183 L_trans 0.0722
+Epoch: [0][30/375]	Inf Time 1.000	Update Time 3.469	Batch Time 4.469	
+L_cls 1.2973 L_sem 0.2032 L_trans 0.0887
+Epoch: [0][40/375]	Inf Time 1.003	Update Time 3.471	Batch Time 4.475	
+L_cls 1.1618 L_sem 0.1688 L_trans 0.0372
+Epoch: [0][50/375]	Inf Time 1.000	Update Time 3.488	Batch Time 4.488	
+L_cls 1.2295 L_sem 0.1888 L_trans 0.0787
+Epoch: [0][60/375]	Inf Time 0.998	Update Time 3.485	Batch Time 4.484	
+L_cls 1.1839 L_sem 0.1865 L_trans 0.0335
+Epoch: [0][70/375]	Inf Time 0.997	Update Time 3.474	Batch Time 4.471	
+L_cls 1.0989 L_sem 0.1436 L_trans 0.0336
+Epoch: [0][80/375]	Inf Time 1.000	Update Time 3.467	Batch Time 4.467	
+L_cls 1.1403 L_sem 0.1712 L_trans 0.0221
+Epoch: [0][90/375]	Inf Time 1.000	Update Time 3.476	Batch Time 4.477	
+L_cls 1.0254 L_sem 0.1913 L_trans 0.0516
+Epoch: [0][100/375]	Inf Time 1.001	Update Time 3.474	Batch Time 4.475	
+L_cls 1.6343 L_sem 0.1465 L_trans 0.0287
+Epoch: [0][110/375]	Inf Time 1.000	Update Time 3.484	Batch Time 4.485	
+L_cls 1.1354 L_sem 0.1536 L_trans 0.0240
+Epoch: [0][120/375]	Inf Time 1.000	Update Time 3.480	Batch Time 4.480	
+L_cls 0.7802 L_sem 0.1392 L_trans 0.0216
+Epoch: [0][130/375]	Inf Time 0.998	Update Time 3.477	Batch Time 4.475	
+L_cls 1.6970 L_sem 0.1540 L_trans 0.0191
+Epoch: [0][140/375]	Inf Time 1.003	Update Time 3.475	Batch Time 4.478	
+L_cls 1.1696 L_sem 0.1537 L_trans 0.0218
+Epoch: [0][150/375]	Inf Time 0.993	Update Time 3.473	Batch Time 4.466	
+L_cls 1.2728 L_sem 0.1479 L_trans 0.0211
+Epoch: [0][160/375]	Inf Time 1.000	Update Time 3.474	Batch Time 4.474	
+L_cls 0.7543 L_sem 0.1514 L_trans 0.0189
+Epoch: [0][170/375]	Inf Time 0.997	Update Time 3.480	Batch Time 4.477	
+L_cls 0.9231 L_sem 0.1585 L_trans 0.0252
+Epoch: [0][180/375]	Inf Time 0.999	Update Time 3.483	Batch Time 4.483	
+L_cls 0.5948 L_sem 0.1283 L_trans 0.0203
+Epoch: [0][190/375]	Inf Time 0.997	Update Time 3.479	Batch Time 4.476	
+L_cls 1.5948 L_sem 0.1500 L_trans 0.0215
+Epoch: [0][200/375]	Inf Time 0.998	Update Time 3.477	Batch Time 4.476	
+L_cls 0.8910 L_sem 0.1461 L_trans 0.0220
+Epoch: [0][210/375]	Inf Time 0.998	Update Time 3.478	Batch Time 4.477	
+L_cls 0.6277 L_sem 0.1290 L_trans 0.0207
+Epoch: [0][220/375]	Inf Time 0.996	Update Time 3.474	Batch Time 4.470	
+L_cls 1.1489 L_sem 0.1500 L_trans 0.0201
+Epoch: [0][230/375]	Inf Time 1.000	Update Time 3.474	Batch Time 4.474	
+L_cls 0.9792 L_sem 0.1443 L_trans 0.0234
+Epoch: [0][240/375]	Inf Time 0.996	Update Time 3.480	Batch Time 4.476	
+L_cls 0.7674 L_sem 0.1457 L_trans 0.0200
+Epoch: [0][250/375]	Inf Time 1.002	Update Time 3.482	Batch Time 4.484	
+L_cls 1.4002 L_sem 0.1419 L_trans 0.0161
+Epoch: [0][260/375]	Inf Time 0.998	Update Time 3.481	Batch Time 4.479	
+L_cls 1.3068 L_sem 0.1521 L_trans 0.0187
+Epoch: [0][270/375]	Inf Time 0.996	Update Time 3.477	Batch Time 4.475	
+L_cls 0.7248 L_sem 0.1320 L_trans 0.0153
+Epoch: [0][280/375]	Inf Time 0.996	Update Time 3.470	Batch Time 4.467	
+L_cls 0.8477 L_sem 0.1343 L_trans 0.0177
+Epoch: [0][290/375]	Inf Time 0.992	Update Time 3.466	Batch Time 4.458	
+L_cls 0.8757 L_sem 0.1358 L_trans 0.0157
+Epoch: [0][300/375]	Inf Time 0.996	Update Time 3.493	Batch Time 4.489	
+L_cls 0.7404 L_sem 0.1351 L_trans 0.0143
+Epoch: [0][310/375]	Inf Time 0.997	Update Time 3.469	Batch Time 4.467	
+L_cls 1.0041 L_sem 0.1561 L_trans 0.0226
+Epoch: [0][320/375]	Inf Time 0.998	Update Time 3.472	Batch Time 4.471	
+L_cls 1.0609 L_sem 0.1644 L_trans 0.0172
+Epoch: [0][330/375]	Inf Time 0.998	Update Time 3.479	Batch Time 4.477	
+L_cls 0.7275 L_sem 0.1373 L_trans 0.0179
+Epoch: [0][340/375]	Inf Time 0.995	Update Time 3.471	Batch Time 4.466	
+L_cls 0.8317 L_sem 0.1392 L_trans 0.0174
+Epoch: [0][350/375]	Inf Time 0.996	Update Time 3.478	Batch Time 4.475	
+L_cls 1.4169 L_sem 0.1438 L_trans 0.0207
+Epoch: [0][360/375]	Inf Time 0.990	Update Time 3.474	Batch Time 4.465	
+L_cls 0.4773 L_sem 0.1381 L_trans 0.0169
+Epoch: [0][370/375]	Inf Time 0.999	Update Time 3.474	Batch Time 4.473	
+L_cls 1.2665 L_sem 0.1404 L_trans 0.0224
+ * ACC1@ 0.863 ACC2@ 26.458
+Epoch: [1][0/375]	Inf Time 0.407	Update Time 3.529	Batch Time 4.453	
+L_cls 0.3829 L_sem 0.1098 L_trans 0.0156
+Traceback (most recent call last):
+  File "main2.py", line 300, in <module>
+    main()
+  File "main2.py", line 197, in main
+    train(train_loader, model, criterion, cls_optimizer, trans_optimizer, epoch,is_fix=args.is_fix)
+  File "main2.py", line 243, in train
+    (L_cls+L_sem).backward(retain_graph=True)        
+  File "/home/mbobo/tools/anaconda3/envs/pt/lib/python3.6/site-packages/torch/tensor.py", line 102, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/mbobo/tools/anaconda3/envs/pt/lib/python3.6/site-packages/torch/autograd/__init__.py", line 90, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: CUDA out of memory. Tried to allocate 196.00 MiB (GPU 0; 11.17 GiB total capacity; 10.03 GiB already allocated; 163.81 MiB free; 686.73 MiB cached)
